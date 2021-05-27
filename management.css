@@ -1,0 +1,156 @@
+body
+{   
+    background-color: rgb(226,240,217);
+    color: rgb(32,56,100);
+}
+
+/*画面右上の会社のロゴ*/
+.logo
+{
+    display: block;
+    width: 130px;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+/*ログイン画面のタイトル*/
+.logintitle
+{
+    font-size: 220%;
+}
+
+/*ログイン画面の下のほうのメッセージ*/
+.loginmessage
+{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/*受験者情報確認ページの下のほうのメッセージ*/
+.checkmessage
+{
+    font-size: 14px;
+    margin-top: 150px;
+}
+
+/*適性検査の説明内容*/
+.explanmessage
+{
+    font-size: 14px;
+    text-align: left;
+    margin-left: 80px;
+}
+
+/*問題文(右上)*/
+.puestion
+{
+    font-size: 13px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/*画面上部の水平線*/
+hr
+{
+    display: block;
+    height: 2px;
+    background-color: rgb(84,130,53);
+    border-top: 10px;
+    margin-top: auto;
+}
+
+/*改行の設定*/
+br
+{    
+    line-height: initial;
+}
+
+/*ログインボタン、次へボタン*/
+.button
+{
+    background-color: rgb(237,125,49);
+    border-color: rgb(208,206,206);
+    color: white;
+    float: right;
+    margin-right: 70px;
+    margin-bottom: 30px;
+}
+.button:hover {
+  opacity: 0.8;
+}
+
+/*戻るボタン*/
+.button2
+{
+    background-color: rgb(237,125,49);
+    border-color: rgb(208,206,206);
+    color: white;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.button2:hover {
+  opacity: 0.8;
+}
+/*画面左上のほうの文字*/
+.process
+{
+    font-size: 20px;
+    color: rgb(0,0,0);
+    text-align: left;
+    margin-left: 30px;
+}
+
+/*管理画面のテキストボックス*/
+.register
+{
+    background-color: white;
+}
+
+/*管理画面のボタン*/
+.managebutton
+{
+    background-color: rgb(237,125,49);
+    border-color: rgb(208,206,206);
+    color: white;
+    font-size: 15px;
+}
+
+.managebutton:hover {
+  opacity: 0.8;
+}
+/*管理画面の登録のテーブル*/
+.manage
+{
+    font-size: 15px;
+    height: 40px;
+    border-spacing: 20px 4px;
+}
+
+.managetitle
+{
+    font-size: 25px;
+    color: black;
+}
+/*管理画面の受験者一覧の表*/
+.list
+{
+    background-color: rgb(208,206,206);
+    border-color: black;
+    border-collapse: collapse;
+    text-align: center;
+    height: 40px;
+}
+
+.output
+{
+    background-color: transparent;
+    border: none;
+}
+
+/*編集ボタンの表の背景*/
+.henkou
+{
+    background-color: rgb(255,242,204);
+}
+

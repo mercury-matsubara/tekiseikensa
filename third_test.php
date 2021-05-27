@@ -1,0 +1,81 @@
+<?php
+  session_start();
+  
+  //ログイン画面にリダイレクトさせる関数
+  function redirectLogin(){
+    echo '<script type="text/javascript">';
+    echo "<!--\n";
+    echo 'location.href = "login.php"';
+    echo '// -->';
+    echo '</script>';
+  }
+  
+  function redirectTestPage($page){
+    if($page === 1){
+      echo '<script type="text/javascript">';
+      echo "<!--\n";
+      echo 'location.href = "first_test_example.php"';
+      echo '// -->';
+      echo '</script>';
+    }
+    else if($page === 2){
+      echo '<script type="text/javascript">';
+      echo "<!--\n";
+      echo 'location.href = "second_test_example.php"';
+      echo '// -->';
+      echo '</script>';
+    }
+    else if($page === 3){
+      echo '<script type="text/javascript">';
+      echo "<!--\n";
+      echo 'location.href = "third_test_example.php"';
+      echo '// -->';
+      echo '</script>';
+    }
+  }
+  
+  /*
+  * 認証情報確認部
+  */
+  if(!isset($_SESSION["userId"])){
+    redirectLogin();
+  }
+  if($_SESSION["testSection"] != 3){
+    redirectTestPage($_SESSION["testSection"]);
+  }
+?>
+<html>
+<head>
+<title>第三部 - 適性検査 | MercurySoft</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="test_page_app.js"></script>
+<script>
+  window.onload = function(){
+    getTestData("test_data_ajax.php?page=");
+      // 画面開いたら一番最初に走る処理
+      timerStart(900);//15分で設定
+      timerStart(9999);//デバック用
+  };
+</script>
+</head>
+<body>
+  <div id="app">
+    <div class="main">
+      <div class="header">
+	<img src="./img/mercury_soft_logo&mark_basic_02.png" >
+	<hr class="primary">
+      </div>
+      <div class="contents">
+	<div class="timer" id="timer">
+	  [残り時間]15分00秒
+	</div>
+	<div id="testDataAjax">
+	</div>
+      </div>
+  <script src="test_page_app.js"></script>
+  <script src="blockBack.js"></script>
+</body>
+</html>
