@@ -107,12 +107,22 @@
     sessionInit();
   }
 
+  if(isset($_POST['back']))
+  {
+      $_SESSION['exampleback'] = 1;
+      echo '<script type="text/javascript">';
+      echo "<!--\n";
+      echo 'location.href = "manual.php"';
+      echo '// -->';
+      echo '</script>';
+  }
 ?>
 <html>
 <head>
+<link rel="shortcut icon" href="./img/favicon.ico">
 <title>試験入力例 - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="css.css" rel="stylesheet" type="text/css">
+<link href="test_page_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -126,6 +136,7 @@
       <div class="workPlace">
 	<p>まずは、例題です。</p>
 	<div class="testPlace">
+	  <br>
 	  いくつかの文字が一定の規則に従って並んでいます。
 	  <br>
 	  その規則を見つけ出し、次にくるべき文字を選んで、配列を完成させてください。
@@ -135,14 +146,14 @@
 	      <td width="10%"></td>	
 	      <td width="20%" class="questionSpacing" align="right">回答番号→</td>
 	      <td width="20%" class="resultSpacing">12345</td>
-	      <td width="10%" >回答欄</td>
+	      <td width="5%" >回答欄</td>
 	      <td width="30%" ></td>
 	    </tr>
 	    <tr>
 	      <td width="10%">例題１</td>	
 	      <td width="20%" class="questionSpacing">abababab</td>
 	      <td width="20%" class="resultSpacing">abcde</td>
-	      <td width="10%">
+	      <td width="5%">
 		<select class="resultSelect">
 		  <option value="" hidden>1</option>
 		</select>
@@ -153,7 +164,7 @@
 	      <td width="10%">例題2</td>	
 	      <td width="20%" class="questionSpacing">aabbccdd</td>
 	      <td width="20%" class="resultSpacing">abcde</td>
-	      <td width="10%">
+	      <td width="5%">
 		<select class="resultSelect">
 		  <option value="" hidden>5</option>
 		</select>
@@ -164,7 +175,7 @@
 	      <td width="10%">例題3</td>	
 	      <td width="20%" class="questionSpacing">cadaeafa</td>
 	      <td width="20%" class="resultSpacing">defgh</td>
-	      <td width="10%">
+	      <td width="5%">
 		<select class="resultSelect">
 		  <option value="" hidden>4</option>
 		</select>
@@ -175,7 +186,7 @@
 	      <td width="10%">例題4</td>	
 	      <td width="20%" class="questionSpacing">axbyaxbyaxb</td>
 	      <td width="20%" class="resultSpacing">abcxy</td>
-	      <td width="10%">
+	      <td width="5%">
 		<select class="resultSelect">
 		  <option value="" hidden>5</option>
 		</select>
@@ -185,9 +196,12 @@
 	  </table>
 	</div>
       </div>
+      <form action="first_test_example.php" method="post">
       <div class="transitionButton">
+	<input type='submit' name='back' class="button" value = '戻る' >
 	<input type='button' onclick="location.href='./first_test.php'" name='next' class="button" value = '次へ' >
       </div>
+      </form>
     </div>
   </div>
   <script src="blockBack.js"></script>

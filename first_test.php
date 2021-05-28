@@ -46,17 +46,18 @@
 ?>
 <html>
 <head>
+<link rel="shortcut icon" href="./img/favicon.ico">
 <title>第一部 - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="css.css" rel="stylesheet" type="text/css">
+<link href="test_page_style.css" rel="stylesheet" type="text/css">
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
   window.onload = function(){
-    getTestData("test_data_ajax.php?page=");
     // 画面開いたら一番最初に走る処理
-    //timerStart(600);//10分で設定
-    timerStart(9999);//デバッグ用
+    getTestData("test_data_ajax.php?page=");
+    timerStart(600);//10分で設定
+    //timerStart(9999);//デバッグ用
   };
 </script>
 </head>

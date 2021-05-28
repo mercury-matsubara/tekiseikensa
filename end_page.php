@@ -21,6 +21,7 @@
 ?>
 <html>
 <head>
+<link rel="shortcut icon" href="./img/favicon.ico">
 <title>終了画面 - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css.css" rel="stylesheet" type="text/css">

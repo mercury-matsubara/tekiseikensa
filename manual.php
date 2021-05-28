@@ -12,11 +12,18 @@
   
   function redirectTestPage($page){
     if($page === 1){
-      echo '<script type="text/javascript">';
-      echo "<!--\n";
-      echo 'location.href = "first_test_example.php"';
-      echo '// -->';
-      echo '</script>';
+      if($_SESSION['exampleback'] != 1)
+      {
+          echo '<script type="text/javascript">';
+          echo "<!--\n";
+          echo 'location.href = "first_test_example.php"';
+          echo '// -->';
+          echo '</script>';
+      }
+      else
+      {
+          $_SESSION['exampleback'] = 0;
+      }
     }
     else if($page === 2){
       echo '<script type="text/javascript">';
@@ -46,6 +53,7 @@
 ?>
 <html>
 <head>
+<link rel="shortcut icon" href="./img/favicon.ico">
 <title>試験説明 - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css.css" rel="stylesheet" type="text/css">
@@ -77,7 +85,7 @@
 	<p>よろしければ、「次へ」ボタンを押してください。</p>
       </div>
       <div class="transitionButton">
-	<input type='button' onclick="location.href='./confirm_info.php'" name='back' class="button" value = '戻る' >
+	<!--<input type='button' onclick="location.href='./confirm_info.php'" name='back' class="button" value = '戻る' >-->
 	<input type='button' onclick="location.href='./first_test_example.php'" name='next' class="button" value = '次へ' >
       </div>
     </div>

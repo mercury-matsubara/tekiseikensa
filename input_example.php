@@ -98,7 +98,8 @@
 
 ?>
 <html>
-<head>
+<head>]
+<link rel="shortcut icon" href="./img/favicon.ico">
 <title>試験入力例 - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css.css" rel="stylesheet" type="text/css">

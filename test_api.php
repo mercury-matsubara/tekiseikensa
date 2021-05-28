@@ -127,27 +127,32 @@ function setAnswerSession(){
       $_SESSION["answer"]["answer2"] = $_POST["question2"];
       $_SESSION["answer"]["answer3"] = $_POST["question3"];
       $_SESSION["answer"]["answer4"] = $_POST["question4"];
-      $_SESSION["answer"]["answer5"] = $_POST["question5"];
-      $_SESSION["answer"]["answer6"] = $_POST["question6"];
-      $_SESSION["answer"]["answer7"] = $_POST["question7"];
     }
     else if($_SESSION["testIndex"] === 2){
-      $_SESSION["answer"]["answer8"] = $_POST["question1"]; 
-      $_SESSION["answer"]["answer9"] = $_POST["question2"];
-      $_SESSION["answer"]["answer10"] = $_POST["question3"];
-      $_SESSION["answer"]["answer11"] = $_POST["question4"];
-      $_SESSION["answer"]["answer12"] = $_POST["question5"];
-      $_SESSION["answer"]["answer13"] = $_POST["question6"];
-      $_SESSION["answer"]["answer14"] = $_POST["question7"];
+      $_SESSION["answer"]["answer5"] = $_POST["question1"]; 
+      $_SESSION["answer"]["answer6"] = $_POST["question2"];
+      $_SESSION["answer"]["answer7"] = $_POST["question3"];
+      $_SESSION["answer"]["answer8"] = $_POST["question4"];
     }
     else if($_SESSION["testIndex"] === 3){
-      $_SESSION["answer"]["answer15"] = $_POST["question1"]; 
-      $_SESSION["answer"]["answer16"] = $_POST["question2"];
-      $_SESSION["answer"]["answer17"] = $_POST["question3"];
-      $_SESSION["answer"]["answer18"] = $_POST["question4"];
-      $_SESSION["answer"]["answer19"] = $_POST["question5"];
-      $_SESSION["answer"]["answer20"] = $_POST["question6"];
+      $_SESSION["answer"]["answer9"] = $_POST["question1"]; 
+      $_SESSION["answer"]["answer10"] = $_POST["question2"];
+      $_SESSION["answer"]["answer11"] = $_POST["question3"];
+      $_SESSION["answer"]["answer12"] = $_POST["question4"];
     }
+    else if($_SESSION["testIndex"] === 4){
+      $_SESSION["answer"]["answer13"] = $_POST["question1"]; 
+      $_SESSION["answer"]["answer14"] = $_POST["question2"];
+      $_SESSION["answer"]["answer15"] = $_POST["question3"];
+      $_SESSION["answer"]["answer16"] = $_POST["question4"];
+    }
+    else if($_SESSION["testIndex"] === 5){
+      $_SESSION["answer"]["answer17"] = $_POST["question1"]; 
+      $_SESSION["answer"]["answer18"] = $_POST["question2"];
+      $_SESSION["answer"]["answer19"] = $_POST["question3"];
+      $_SESSION["answer"]["answer20"] = $_POST["question4"];
+    }
+    
   }
 }
 

@@ -1,13 +1,14 @@
+let interval_id;
+
 function timerStart(time){
     //時間をWebストレージに保存
     //問題各部が終わるタイミングでtimeを破棄しないといけないです
-    if(!localStorage.getItem('time')){
-        localStorage.setItem('time', time);
+    if(!sessionStorage.getItem('time')){
+        sessionStorage.setItem('time', time);
     }
 
-    var interval_id;
-    var min = 0;
-    var sec = 0;
+    let min = 0;
+    let sec = 0;
     //カウント処理開始
     count_start();
     function count_start(){
@@ -16,18 +17,18 @@ function timerStart(time){
     }
     function count_down(){
         //ログ出力
-        console.log( Number(localStorage.getItem('time')));
+        console.log( Number(sessionStorage.getItem('time')));
         //タイマー処理
-        if ( Number(localStorage.getItem('time')) === 1 ){
+        if ( Number(sessionStorage.getItem('time')) === 1 ){
             //時間経過したら処理実行
             count_stop();
             window.alert('終了時間です。'); 
             timeUpPostAnswerData("test_api.php");
         }else{
             //時間計算
-            localStorage.setItem('time', Number(localStorage.getItem('time')) - 1);
-            min = Math.floor( Number(localStorage.getItem('time')) / 60);
-            sec = Math.floor( Number(localStorage.getItem('time')) % 60);
+            sessionStorage.setItem('time', Number(sessionStorage.getItem('time')) - 1);
+            min = Math.floor( Number(sessionStorage.getItem('time')) / 60);
+            sec = Math.floor( Number(sessionStorage.getItem('time')) % 60);
             //HTMLに書き込み
             $("#timer").html('[残り時間]' + min +'分' + sec + '秒' );
             if (sec<10) {
@@ -35,9 +36,10 @@ function timerStart(time){
             }
         }
     }
-    function count_stop(){
-        clearInterval(interval_id);
-    }
+}
+
+function count_stop(){
+    clearInterval(interval_id);
 }
 
 function postAnswerData(URL){
@@ -88,7 +90,7 @@ function postAnswerData(URL){
 //タイムアップしたときに呼び出される関数
 function timeUpPostAnswerData(URL){ 
     //タイマーをリセット
-    localStorage.removeItem('time');
+    sessionStorage.removeItem('time');
     
     $("#test_form").append($('<input />', {
         type: 'hidden',
@@ -158,4 +160,3 @@ function getTestData(URL){
 
     });
 }
-

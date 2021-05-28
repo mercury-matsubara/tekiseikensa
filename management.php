@@ -36,216 +36,143 @@
     
     //受検者情報表示
     function hyozi($con){
+        $sql = "SELECT * FROM user";
+        
         if(isset($_POST['search']))
         {
-        
-         if($_POST['year'] == "")
-        {
-            $year = "";
-        }
-        else
-        {
-            $year = $_POST['year'];
-        }
-        
-        if($_POST['userid'] == "")
-        {
-            $id = "";
-        }
-        else
-        {
-           $id = $_POST['userid'];
-        }
-        
-        if($_POST['namekan'] == "")
-        {
-            $namekan = "";
-        }
-        else
-        {
-            $namekan = $_POST['namekan'];
-        }
-        
-        if($_POST['namekana'] == "")
-        {
-            $namekana = "";
-        }
-        else
-        {
-            $namekana = $_POST['namekana'];
-        }
-        
-        if($_POST['registrationdate'] == "")
-        {
-            $registration = "";
-        }
-        else
-        {
-            $registration = $_POST['registrationdate'];
-        }
-        
-        if($_POST['testdate'] == "")
-        {
-            $testdate = "";
-        }
-        else
-        {
-            $testdate = $_POST['testdate'];
-        }
-        
-        //sql作成
-        $sql = "select *from user ";
-        $hantei = 0;
-        
-        //yaerの入力判定
-        if($year == "")
-        {           
-        }
-        else
-        {
-            $sql .= "where recruit_year = '".$year."'";
-            $hantei = 1;
-        }
-        
-        //idの入力判定
-        if($id == "")
-        {
-        }
-        else
-        {
-            if($hantei == 1)
-            {
-                $sql .= " AND ID = '".$id."'";
-            }
-            else
-            {
-                $sql .= "where ID = '".$id."'";
-            }
-            
-            $hantei = 1;
-        }
-        
-        //namekanの入力判定
-        if($namekan == "")
-        {
-        }
-        else
-        {
-            if($hantei == 1)
-            {
-                $sql .= " AND name_kanji = '".$namekan."'";
-            }
-            else
-            {
-                $sql .= "where name_kanji = '".$namekan."'";
-            }
-            $hantei = 1;
-        }    
+            $hantei = 0;
 
-        //namekanaの入力判定
-        if($namekana == "")
-        {           
+            //yaerの入力判定
+            if($_POST['year'] != "")
+            {        
+                $sql .= " where recruit_year = '".$_POST['year']."'";
+                $hantei = 1;
+            }
+
+            //idの入力判定
+            if($_POST['userid'] != "")
+            {
+                if($hantei == 1)
+                {
+                    $sql .= " AND ID = '".$_POST['userid']."'";
+                }
+                else
+                {
+                    $sql .= " where ID = '".$_POST['userid']."'";
+                }
+
+                $hantei = 1;
+            }
+
+            //namekanの入力判定
+            if($_POST['namekan'] != "")
+            {
+                if($hantei == 1)
+                {
+                    $sql .= " AND name_kanji = '".$_POST['namekan']."'";
+                }
+                else
+                {
+                    $sql .= " where name_kanji = '".$_POST['namekan']."'";
+                }
+                $hantei = 1;
+            }
+   
+            //namekanaの入力判定
+            if($_POST['namekana'] != "")
+            {     
+                if($hantei == 1)
+                {
+                    $sql .= " AND name_kana = '".$_POST['namekana']."'";
+                }
+                else
+                {
+                    $sql .= " where name_kana = '".$_POST['namekana']."'";
+                }
+                $hantei = 1;
+            }
+ 
+            //registrationdateの入力判定
+            if($_POST['registrationdate'] != "")
+            {        
+                if($hantei == 1)
+                {
+                    $sql .= " AND register_day = '".$_POST['registrationdate']."'"; 
+                }
+                else
+                {
+                    $sql .= " where register_day = '".$_POST['registrationdate']."'";
+                }
+                $hantei = 1;
+            }
+
+            //testdateの入力判定
+            if($_POST['testdate'] != "")
+            {
+                if($hantei == 1)
+                {
+                    $sql .= " AND test_day = '".$_POST['testdate']."'";
+                }
+                else
+                {
+                    $sql .= " where test_day = '".$_POST['testdate']."'";
+                }
+            }           
         }
-        else
-        {
-            if($hantei == 1)
-            {
-                $sql .= " AND name_kana = '".$namekana."'";
-            }
-            else
-            {
-                $sql .= "where name_kana = '".$namekana."'";
-            }
-            $hantei = 1;
-        }
-        
-        //registrationdateの入力判定
-        if($registration == "")
-        {            
-        }
-        else
-        {
-            if($hantei == 1)
-            {
-                $sql .= " AND register_day = '".$registration."'"; 
-            }
-            else
-            {
-                $sql .= "where register_day = '".$registration."'";
-            }
-            $hantei = 1;
-        }
-        
-        //testdateの入力判定
-        if($testdate == "")
-        {
-        }
-        else
-        {
-            if($hantei == 1)
-            {
-                $sql .= " AND test_day = '".$testdate."'";
-            }
-            else
-            {
-                $sql .= "where test_day = '".$testdate."'";
-            }
-        } 
-        
         $sql .= ";";
         
-    }
-    else
-    {
-        $sql = "SELECT * FROM user;";
-    }
-    $stmt = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-    
-    $_SESSION['stmt'] = $stmt;
-    
-    //1ページの表示数 
-    define('MAX', '10');
-    
-    //データ件数
-    $hyozinum = count($stmt);
-    
-    if($hyozinum > 0){
-        //トータルページ数
-        $max_page = ceil($hyozinum / MAX);
+        $stmt = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
-        if(!isset($_GET['page_id'])){ // $_GET['page_id'] はURLに渡された現在のページ数
-            $now = 1; // 設定されてない場合は1ページ目にする
-        }else{
-            $now = $_GET['page_id'];
-        }
+        $_SESSION['stmt'] = $stmt;
 
-        $start_no = ($now - 1) * MAX; // 配列の何番目から取得すればよいか
+        //1ページの表示数 
+        define('MAX', '10');
 
-        $disp_data = array_slice($stmt, $start_no, MAX, true);
-        $_SESSION['data'] = $disp_data;
-        
-        foreach($disp_data as $val){
-            $html = '<form action="management.php" method="post">';
-            $html .='<tr>';
-            $html .='<td class ="henkou"><input type="text" name = "ichiranuserid" class = "output"size ="10" value ="'.$val['ID'].'" onchange=change()></td>';
-            $html .='<td class ="henkou"><input type="text" name = "ichirannamekan" class = "output" size ="15"value ="'.$val['name_kanji'].'" onchange=change()></td>';
-            $html .='<td class ="henkou"><input type="text" name = "ichirannamekana" class = "output" size ="15" value ="'.$val['name_kana'].'" onchange=change()></td>';
-            $html .='<td>'.$val['password'].'</td>';
-            $html .='<td class ="henkou"><input type="text" name = "ichiranyear" class = "output" size ="10" value ="'.$val['recruit_year'].'" onchange=change()></td>';
+        //データ件数
+        $hyozinum = count($stmt);
 
-            $html .='<td class ="henkou"><input type="date" name = "ichiranregistrationdate" class = "output" size ="8" value ="'.$val['register_day'].'" onchange=change()></td>';
-            $html .='<td class ="henkou"><input type="date" name = "ichirantestdate" class = "output" size ="8" value ="'.$val['test_day'].'" onchange=change()></td>';
-            $html .='<td class ="henkou"><input type="text" name = "ichirangloup" class = "output" size ="8" value ="'.$val['stat'].'" onchange=change()></td>';
-            $html .='<td>'.$val['sum_score'].'</td>';
-            $html .='<td>'.$val['rank_score'].'</td>';
-            $html .='<td><input type="submit" name = "hensyu" class ="ichiranhensyubutton" size ="8" value="編集"></td>';
-            $html .='<td><input type="submit" name = "sakuzyo" class ="ichiranhensyubutton" size ="8" value="削除"><input type="hidden" value ="'.$val['userNumber'].'" name ="ichirannum"></td>';
-            $html .='</tr>';
-            $html .='</form>';
-            echo $html;
-        }
-           $html .= "</table>";
-           
+        if($hyozinum > 0)
+        {
+            //トータルページ数
+            $max_page = ceil($hyozinum / MAX);
+
+            if(!isset($_GET['page_id']))
+            { // $_GET['page_id'] はURLに渡された現在のページ数
+                $now = 1; // 設定されてない場合は1ページ目にする
+            }
+            else
+            {
+                $now = $_GET['page_id'];
+            }
+
+            $start_no = ($now - 1) * MAX; // 配列の何番目から取得すればよいか
+
+            $disp_data = array_slice($stmt, $start_no, MAX, true);
+            $_SESSION['data'] = $disp_data;
+
+            foreach($disp_data as $val)
+            {
+                $html = '<form action="management.php" method="post">';
+                $html .='<tr>';
+                $html .='<td class ="henkou"><input type="text" name = "ichiranuserid" class = "output"size ="10" value ="'.$val['ID'].'" onchange=change()></td>';
+                $html .='<td class ="henkou"><input type="text" name = "ichirannamekan" class = "output" size ="15"value ="'.$val['name_kanji'].'" onchange=change()></td>';
+                $html .='<td class ="henkou"><input type="text" name = "ichirannamekana" class = "output" size ="15" value ="'.$val['name_kana'].'" onchange=change()></td>';
+                $html .='<td>'.$val['password'].'</td>';
+                $html .='<td class ="henkou"><input type="text" name = "ichiranyear" class = "output" size ="10" value ="'.$val['recruit_year'].'" onchange=change()></td>';
+
+                $html .='<td class ="henkou"><input type="date" name = "ichiranregistrationdate" class = "output" size ="8" value ="'.$val['register_day'].'" onchange=change()></td>';
+                $html .='<td class ="henkou"><input type="date" name = "ichirantestdate" class = "output" size ="8" value ="'.$val['test_day'].'" onchange=change()></td>';
+                $html .='<td class ="henkou"><input type="text" name = "ichirangloup" class = "output" size ="8" value ="'.$val['stat'].'" onchange=change()></td>';
+                $html .='<td>'.$val['sum_score'].'</td>';
+                $html .='<td>'.$val['rank_score'].'</td>';
+                $html .='<td><input type="submit" name = "hensyu" class ="ichiranhensyubutton" size ="8" value="編集"></td>';
+                $html .='<td><input type="submit" name = "sakuzyo" class ="ichiranhensyubutton" size ="8" value="削除"><input type="hidden" value ="'.$val['userNumber'].'" name ="ichirannum"></td>';
+                $html .='</tr>';
+                $html .='</form>';
+                echo $html;
+            }
+            $html .= "</table>";
+
             //件数の表示
             if($now != $max_page)
             {
@@ -267,19 +194,21 @@
                 echo '<td>　　</td>';
             }
 
-        for($i = 1; $i <= $max_page; $i++)
-        {
-            if ($i == $now) { // 現在表示中のページ数の場合はリンクを貼らない
-                $pagebotan = '<td width = 25px>'.$now.'</td>';
-                echo $pagebotan;
+            for($i = 1; $i <= $max_page; $i++)
+            {
+                if ($i == $now)
+                { // 現在表示中のページ数の場合はリンクを貼らない
+                    $pagebotan = '<td width = 25px>'.$now.'</td>';
+                    echo $pagebotan;
+                }
+                else
+                {
+                    $pagebotan = '<td width = 25px><a href="management.php?page_id='. $i. '")>'. $i. '</a>'. '　</td>';
+                    echo $pagebotan;
+                }
             }
-            else {
-                $pagebotan = '<td width = 25px><a href="management.php?page_id='. $i. '")>'. $i. '</a>'. '　</td>';
-                echo $pagebotan;
-            }
-        }
 
-        if($now != $max_page)
+            if($now != $max_page)
             {
                 echo '<td width = 50px><a href="management.php?page_id='. ($now + 1). '")>次へ</a></td>';
                 echo '<td width = 50px><a href="management.php?page_id='.$max_page. '")>最後へ</a></td>';
@@ -289,19 +218,21 @@
                 echo '<td>　　</td>';
                 echo '<td>　　　</td>';
             }
-    }
-    else
-    {
-        echo "</table>";
-        echo "<script>alert('検索結果が見つかりません');</script>";
-    }
+        }
+        else
+        {
+            echo "</table>";
+            echo "<script>alert('検索結果が見つかりません');</script>";
+        }
         return $stmt;
     }
+    
     //新規登録
     if(isset($_POST['new']))
     {
         //受検者IDが未入力の時
-        if($_POST['userid'] == ""){
+        if($_POST['userid'] == "")
+        {
             echo "<script>alert('受検者IDが未入力です');</script>";
             echo '<script type="text/javascript">';
             echo "<!--\n";
@@ -309,20 +240,30 @@
             echo '// -->';
             echo '</script>';
         }
-        else{
-            if($_POST['year'] == ""){
+        else
+        {
+            if($_POST['year'] == "")
+            {
                 $newyear = "0";
-            }else{
+            }
+            else
+            {
                 $newyear = $_POST['year'];
             }
-            if($_POST['namekan'] == ""){
+            if($_POST['namekan'] == "")
+            {
                 $newnamekan = "";
-            }else{
+            }
+            else
+            {
                 $newnamekan = $_POST['namekan'];
             }
-            if($_POST['namekana'] == ""){
+            if($_POST['namekana'] == "")
+            {
                 $newnamekana = "";
-            }else{
+            }
+            else
+            {
                 $newnamekana = $_POST['namekana'];
             }
             $sql = "select * from user where ID = '".$_POST['userid']."'; ";
@@ -332,7 +273,8 @@
             $result = $con->query($sql);											// クエリ発行
             $rownums = $result->rowCount();
             
-            if($rownums != 0){
+            if($rownums != 0)
+            {
                 echo "<script>alert('受検者IDが重複しています');</script>";
                 echo '<script type="text/javascript">';
                 echo "<!--\n";
@@ -340,7 +282,8 @@
                 echo '// -->';
                 echo '</script>';
             }
-            else{
+            else
+            {
                 $newid = $_POST['userid'];
                 $newregistrationdate = date('Y/m/d');
 
@@ -366,10 +309,12 @@
     if(isset($_POST['hensyu']))
     {
         //受検者IDが未入力の時
-        if($_POST['ichiranuserid'] == ""){
+        if($_POST['ichiranuserid'] == "")
+        {
             echo "<script>alert('受検者IDが空白です');</script>";
         }
-        else{
+        else
+        {
             $sql = "select * from user where ID = '".$_POST['ichiranuserid']."'; ";
             $henko = "select * from user where userNumber = '".$_POST['ichirannum']."'; ";																							
             $rownums = 0;	
@@ -379,72 +324,101 @@
             $List = $result->fetch(PDO::FETCH_ASSOC);
             $h_list = $h_result->fetch(PDO::FETCH_ASSOC);
             
-            if($rownums == 0 || $_POST['ichiranuserid'] == $h_list['ID']){
-                echo "<script>alert('データを編集しました');</script>";
+            if($rownums == 0 || $_POST['ichiranuserid'] == $h_list['ID'])
+            {
                 //値を受け取る
-                if($_POST['ichirannamekan'] == ""){
+                if($_POST['ichirannamekan'] == "")
+                {
                     $cnamekan = "";
-                }else{
+                }
+                else
+                {
                     $cnamekan = $_POST['ichirannamekan'];
                 }
-                if($_POST['ichirannamekana'] == ""){
+                if($_POST['ichirannamekana'] == "")
+                {
                     $cnamekana = "";
-                }else{
+                }
+                else
+                {
                     $cnamekana = $_POST['ichirannamekana'];
                 }
-                if($_POST['ichirangloup'] == ""){
-                    $cgloup = 0;
-                }else{
-                    $cgloup = $_POST['ichirangloup'];
-                }
-                if($_POST['ichiranyear'] == ""){
+                if($_POST['ichiranyear'] == "")
+                {
                     $cyear = "0";
-                }else{
+                }
+                else
+                {
                     $cyear = $_POST['ichiranyear'];
                 }
 
+                if($_POST['ichiranregistrationdate'] == "")
+                {
+                    $cregistrationdate = NULL;
+                }
+                else
+                {
+                    $cregistrationdate = $_POST['ichiranregistrationdate'];
+                }
+                
                 $cuserid = $_POST['ichiranuserid'];
                 $ctestdate = $_POST['ichirantestdate'];
-                $cregistrationdate = $_POST['ichiranregistrationdate'];
+                
                 $cnum = $_POST['ichirannum'];
 
-                //受検日が入力されていない場合
-                if($ctestdate == ""){
-                    $change = "update user set ID = :id, name_kanji = :namekan, name_kana = :namekana, 
-                         recruit_year = :year, register_day = :registrationdate, stat = :gloup
-                         where userNumber = '".$cnum."';";
-                    
-                    $csql = $con->prepare($change);
-                    $con ->beginTransaction();
-                    
-                    $csql ->bindParam(':id', $cuserid);
-                    $csql ->bindParam(':namekan', $cnamekan);
-                    $csql ->bindParam(':namekana', $cnamekana);
-                    $csql ->bindParam(':year', $cyear);
-                    $csql ->bindParam(':registrationdate',$cregistrationdate);
-                    $csql ->bindParam(':gloup', $cgloup);
-                    $csql ->execute();
-                    $con->commit();
-                }else{       
-                    $change = "update user set ID = :id, name_kanji = :namekan, name_kana = :namekana, 
-                         recruit_year = :year, test_day = :testdate, register_day = :registrationdate, stat = :gloup
-                         where userNumber = '".$cnum."';";
-                    
-                    $csql = $con->prepare($change);
-                    $con ->beginTransaction();
+                //受検区分が1または0なら編集を行う、そうでない場合はメッセージを表示
+                if($_POST['ichirangloup'] == 1 || $_POST['ichirangloup'] == 0)
+                {
+                    $cgloup = $_POST['ichirangloup'];
+               
+                    //受検日が入力されていない場合
+                    if($ctestdate == "")
+                    {
+                        $change = "update user set ID = :id, name_kanji = :namekan, name_kana = :namekana, 
+                             recruit_year = :year, register_day = :registrationdate, stat = :gloup, test_day = NULL
+                             where userNumber = '".$cnum."';";
 
-                    $csql ->bindParam(':id', $cuserid);
-                    $csql ->bindParam(':namekan', $cnamekan);
-                    $csql ->bindParam(':namekana', $cnamekana);
-                    $csql ->bindParam(':year', $cyear);
-                    $csql ->bindParam(':registrationdate',$cregistrationdate);
-                    $csql ->bindParam(':testdate', $ctestdate);
-                    $csql ->bindParam(':gloup', $cgloup);
-                    $csql ->execute();
-                    $con->commit();
+                        $csql = $con->prepare($change);
+                        $con ->beginTransaction();
+
+                        $csql ->bindParam(':id', $cuserid);
+                        $csql ->bindParam(':namekan', $cnamekan);
+                        $csql ->bindParam(':namekana', $cnamekana);
+                        $csql ->bindParam(':year', $cyear);
+                        $csql ->bindParam(':registrationdate',$cregistrationdate);
+                        $csql ->bindParam(':gloup', $cgloup);
+                        $csql ->execute();
+                        $con->commit();
+                        echo "<script>alert('データを編集しました');</script>";
+                    }
+                    else
+                    {       
+                        $change = "update user set ID = :id, name_kanji = :namekan, name_kana = :namekana, 
+                             recruit_year = :year, test_day = :testdate, register_day = :registrationdate, stat = :gloup
+                             where userNumber = '".$cnum."';";
+
+                        $csql = $con->prepare($change);
+                        $con ->beginTransaction();
+
+                        $csql ->bindParam(':id', $cuserid);
+                        $csql ->bindParam(':namekan', $cnamekan);
+                        $csql ->bindParam(':namekana', $cnamekana);
+                        $csql ->bindParam(':year', $cyear);
+                        $csql ->bindParam(':registrationdate',$cregistrationdate);
+                        $csql ->bindParam(':testdate', $ctestdate);
+                        $csql ->bindParam(':gloup', $cgloup);
+                        $csql ->execute();
+                        $con->commit();
+                        echo "<script>alert('データを編集しました');</script>";
+                    }
+                }
+                else
+                {
+                    echo "<script>alert('受検区分は0か1を入力してください');</script>";
                 }
             }
-            else{
+            else
+            {
                 echo "<script>alert('受検者IDが重複しています');</script>";
             }
         }
@@ -468,13 +442,13 @@
     {   
         //出力情報の設定
         header("Content-Type: application/octet-stream");
-        header("Content-Disposition: attachment; filename=searchdeta.csv");
+        header("Content-Disposition: attachment; filename=受験者情報.csv");
         header("Content-Transfer-Encoding: binary");
         
         //変数の初期化
         $csv = null;
         
-        $csv = '"受検者ID","氏名","氏名(カナ)","パスワード","採用年度","登録日","受検日","受検区分","評価ランク","総合得点","正答数","誤答数"';
+        $csv = '"受検者ID","氏名","氏名(カナ)","パスワード","採用年度","登録日","受検日","受検区分","評価ランク","総合得点","第1部正答数","第1部誤答数","第2部正答数","第2部誤答数","第3部正答数","第3部誤答数"';
         $csv .= ',"第1部問1","第1部問2","第1部問3","第1部問4","第1部問5","第1部問6","第1部問7","第1部問8","第1部問9","第1部問10"';
         $csv .= ',"第1部問11","第1部問12","第1部問13","第1部問14","第1部問15","第1部問16","第1部問17","第1部問18","第1部問19","第1部問20"';
         $csv .= ',"第1部問21","第1部問22","第1部問23","第1部問24","第1部問25","第1部問26","第1部問27","第1部問28","第1部問29","第1部問30"';
@@ -489,7 +463,8 @@
         $array = $_SESSION['stmt'];
         
         $x = 0;
-        foreach ($array as $user){
+        foreach ($array as $user)
+        {
             $csvid[$x] = $user['ID'];
             $x++;
         }
@@ -520,200 +495,44 @@
             $csv .= ',';
             $csv .= $value['sum_score'];
             $csv .= ',';
-            //正答数
+            $csv .= $value['first_correct'];
             $csv .= ',';
-            //誤答数
+            $csv .= $value['first_wrong'];
+            $csv .= ',';
+            $csv .= $value['second_correct'];
+            $csv .= ',';
+            $csv .= $value['second_wrong'];
+            $csv .= ',';
+            $csv .= $value['third_correct'];
+            $csv .= ',';
+            $csv .= $value['third_wrong'];
             $csv .= ',';
             
             //useridがマーキュリーならば解答情報は入力せず、改行する
-            if($csvid[$i] == "mercury"){
+            if($csvid[$i] == "mercury")
+            {
                 $csv .= "\r\n";
             }
-            else{
+            else
+            {
                 //第一部解答
-                $csv .= $stmt[0]['first_answer_1'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_2'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_3'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_4'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_5'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_6'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_7'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_8'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_9'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_10'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_11'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_12'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_13'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_14'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_15'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_16'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_17'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_18'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_19'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_20'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_21'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_22'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_23'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_24'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_25'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_26'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_27'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_28'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_29'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_30'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_31'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_32'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_33'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_34'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_35'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_36'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_37'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_38'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_39'];
-                $csv .= ',';
-                $csv .= $stmt[0]['first_answer_40'];
-                $csv .= ',';
+                for($f=1;$f<=40;$f++)
+                {
+                    $csv .= $stmt[0]['first_answer_'.$f];
+                    $csv .= ',';
+                }
                 //第二部解答
-                $csv .= $stmt[0]['second_answer_1'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_2'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_3'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_4'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_5'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_6'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_7'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_8'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_9'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_10'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_11'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_12'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_13'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_14'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_15'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_16'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_17'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_18'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_19'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_20'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_21'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_22'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_23'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_24'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_25'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_26'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_27'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_28'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_29'];
-                $csv .= ',';
-                $csv .= $stmt[0]['second_answer_30'];
-                $csv .= ',';
+                for($f=1;$f<=30;$f++)
+                {
+                    $csv .= $stmt[0]['second_answer_'.$f];
+                    $csv .= ',';
+                }
                 //第三部解答
-                $csv .= $stmt[0]['third_answer_1'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_2'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_3'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_4'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_5'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_6'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_7'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_8'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_9'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_10'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_11'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_12'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_13'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_14'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_15'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_16'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_17'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_18'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_19'];
-                $csv .= ',';
-                $csv .= $stmt[0]['third_answer_20'];
-                $csv .= ',';
-
+                for($f=1;$f<=20;$f++)
+                {
+                    $csv .= $stmt[0]['third_answer_'.$f];
+                    $csv .= ',';
+                }
                 $csv .= "\r\n";
             }
             $i++;
@@ -721,6 +540,14 @@
         $csv = mb_convert_encoding($csv, "SJIS");
         echo $csv;
         return;
+    }
+    
+    //クリアボタンクリックしたとき
+    if(isset($_POST['clear']))
+    {
+        $sql = "SELECT * FROM user;";
+        $stmt = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        $_SESSION['stmt'] = $stmt;
     }
 ?> 
 <html>
@@ -762,7 +589,8 @@
                                     $yearstmt = $con->query($yearsql)->fetchAll(PDO::FETCH_ASSOC);
                                     
                                     $j = 0;
-                                    foreach ($yearstmt as $yearst){
+                                    foreach ($yearstmt as $yearst)
+                                    {
                                         $yearlist[$j] = $yearst['recruit_year'];
                                         $j++;
                                     }
@@ -773,8 +601,10 @@
                                     
                                     $year = "";
                                     
-                                    for($k=0;$k<$j;$k++){
-                                        if(isset($tyohuku[$k])){
+                                    for($k=0;$k<$j;$k++)
+                                    {
+                                        if(isset($tyohuku[$k]))
+                                        {
                                             $year .= '<option value="'.$tyohuku[$k].'">';
                                         }
                                     }
@@ -822,31 +652,31 @@
                         </td>
                         <td>
                             <input type='submit' name='search' class='managebutton' value = '検索' style="WIDTH: 100px; HEIGHT: 30px">
-                            <input type='submit' name='output' class='managebutton' value = '出力' style="WIDTH: 100px; HEIGHT: 30px">
+                            <input type ='submit' name='clear' class='managebutton' value='クリア' style="WIDTH: 100px; HEIGHT: 30px">
+                            <input type='submit' name='output' class='managebutton' value = '出力' style="WIDTH: 100px; HEIGHT: 30px">                           
                         </td>
                     </tr>
                 </table>
                 <hr>
-                    <div id = "zyouhou">
-                        <table class = "list" border = "1">
-                            <tr>
-                                <td width = "100">受検者ID</td>
-                                <td width = "150">氏名</td>
-                                <td width = "150">氏名(カナ)</td>
-                                <td width = "100">パスワード</td>
-                                <td width = "100">採用年度</td>
-                                <td width = "100">登録日</td>
-                                <td width = "100">受検日</td>
-                                <td width = "80">受検区分</td>
-                                <td width = "80">評価ランク</td>
-                                <td width = "80">総合得点</td>
-                                <td width = "80" class ="hensyu">編集</td>
-                                <td width = "80" class ="hensyu">削除</td>
-                            </tr> 
-                                <?php $stmt = hyozi($con); ?>
-                    </div>
+                <div id = "zyouhou">
+                    <table class = "list" border = "1">
+                        <tr>
+                            <td width = "100">受検者ID</td>
+                            <td width = "150">氏名</td>
+                            <td width = "150">氏名(カナ)</td>
+                            <td width = "100">パスワード</td>
+                            <td width = "100">採用年度</td>
+                            <td width = "100">登録日</td>
+                            <td width = "100">受検日</td>
+                            <td width = "80">受検区分</td>
+                            <td width = "80">評価ランク</td>
+                            <td width = "80">総合得点</td>
+                            <td width = "80" class ="hensyu">編集</td>
+                            <td width = "80" class ="hensyu">削除</td>
+                        </tr> 
+                            <?php $stmt = hyozi($con); ?>
+                </div>
             </form>
         </CENTER>
-
     </body>
 </html>

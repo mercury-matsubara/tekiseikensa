@@ -97,9 +97,10 @@
 ?>
 <html>
 <head>
+<link rel="shortcut icon" href="./img/favicon.ico">
 <title>試験入力例 - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="css.css" rel="stylesheet" type="text/css">
+<link href="test_page_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -113,15 +114,16 @@
       <div class="workPlace">
 	<p>まずは、例題です。</p>
 	<div class="testPlace">
-	  各問の左側にある４つのimageは一定の規則に従って並んでいます。
+	  <br>
+	  各問の左側にある４つの図は一定の規則に従って並んでいます。
 	  <br>
 	  その規則を見つけ出し、次にくるべき図を右側の５つの図から選んでください。
-	  <br><br><br>
+	  <br><br>
 	  <table cellpadding="5px">
 	    <tr>
 	      <td width="5%"></td>	
-	      <td width="20%" class="questionSpacing" align="right">回答番号→</td>
-	      <td width="25%" class="resultSpacing">
+	      <td width="40%" class="questionSpacing" align="right">回答番号→</td>
+	      <td width="40%" class="resultSpacing">
 		<img width="60" src="img/second_test_images/図A.png">
 		<img width="60" src="img/second_test_images/図B.png">
 		<img width="60" src="img/second_test_images/図C.png">
@@ -132,13 +134,13 @@
 	    </tr>
 	    <tr>
 	      <td width="5%">例題1</td>	
-	      <td width="20%" class="questionSpacing">
+	      <td width="40%" class="questionSpacing">
 		<img width="60" src="img/second_test_images/image2.png">
 		<img width="60" src="img/second_test_images/image1.png">
 		<img width="60" src="img/second_test_images/image4.png">
 		<img width="60" src="img/second_test_images/image3.png">
 	      </td>
-	      <td width="25%" class="resultSpacing">
+	      <td width="40%" class="resultSpacing">
 		  <img width="60" src="img/second_test_images/image1.png">
 		  <img width="60" src="img/second_test_images/image2.png">
 		  <img width="60" src="img/second_test_images/image4.png">
@@ -156,11 +158,11 @@
 		  この問題では斜線のある四角が時計回りに順次動いています。右上・右下・左下・左上という順序です。<br>従って、次はまた右上となり、答えは B になります。
 		</td>
 	    </tr>
-	    <tr><td><br><br></td></tr>
+	    <tr><td><br></td></tr>
 	    <tr>
 	      <td width="5%"></td>	
-	      <td width="20%" class="questionSpacing" align="right">回答番号→</td>
-	      <td width="25%" class="resultSpacing">
+	      <td width="40%" class="questionSpacing" align="right">回答番号→</td>
+	      <td width="40%" class="resultSpacing">
 		<img width="60" src="img/second_test_images/図A.png">
 		<img width="60" src="img/second_test_images/図B.png">
 		<img width="60" src="img/second_test_images/図C.png">
@@ -171,13 +173,13 @@
 	    </tr>
 	    <tr>
 	      <td width="5%">例題2</td>	
-	      <td width="20%" class="questionSpacing">
+	      <td width="40%" class="questionSpacing">
 		  <img width="60" src="img/second_test_images/image7.png">
 		  <img width="60" src="img/second_test_images/image8.png">
 		  <img width="60" src="img/second_test_images/image9.png">
 		  <img width="60" src="img/second_test_images/image10.png">
 	      </td>
-	      <td width="25%" class="resultSpacing">
+	      <td width="40%" class="resultSpacing">
 		  <img width="60" src="img/second_test_images/image7.png">
 		  <img width="60" src="img/second_test_images/image8.png">
 		  <img width="60" src="img/second_test_images/image9.png">

@@ -89,7 +89,7 @@
 <head>
 <title>試験入力例 - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="css.css" rel="stylesheet" type="text/css">
+<link href="test_page_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -103,90 +103,51 @@
       <div class="workPlace">
 	<p>まずは、例題です。</p>
 	<div class="testPlace">
-	  各問の左側にある４つのimageは一定の規則に従って並んでいます。
 	  <br>
-	  その規則を見つけ出し、次にくるべき図を右側の５つの図から選んでください。
-	  <br><br><br>
-	  <table cellpadding="5px">
+	  各問に対して、答えの選択肢が４つあります。
+	  <br>
+	  問題を解いて、正しい答えを１つ選んでください。
+	  <br><br>
+	  <table width="100%" cellpadding="10px">
+	      <tr>
+		<td class="number" width="5%"></td>	
+		<td class="questionSpacing" align="right" width="40%"></td>
+		<td class="" width="10%"></td>
+		<td class="" width="10%"></td>
+		<td class="" width="10%"></td>
+		<td class="" width="10%"></td>
+		<td width="5%">回答欄</td>
+	      </tr>
 	    <tr>
-	      <td width="5%"></td>	
-	      <td width="20%" class="questionSpacing" align="right">回答番号→</td>
-	      <td width="25%" class="resultSpacing">
-		<img src="img/second_test_images/図A.png">
-		<img src="img/second_test_images/図B.png">
-		<img src="img/second_test_images/図C.png">
-		<img src="img/second_test_images/図D.png">
-		<img src="img/second_test_images/図E.png">
+	      <td width="5%">例題１</td>	
+	      <td width="40%" class="">
+		  1,200円の定価の品物を２割引で買った。<br>1,000円札を出したら、おつりはいくらか。
 	      </td>
-	      <td width="10%" >回答欄</td>
-	    </tr>
-	    <tr>
-	      <td width="5%">例題1</td>	
-	      <td width="20%" class="questionSpacing">
-		<img src="img/second_test_images/image2.png">
-		<img src="img/second_test_images/image1.png">
-		<img src="img/second_test_images/image4.png">
-		<img src="img/second_test_images/image3.png">
-	      </td>
-	      <td width="25%" class="resultSpacing">
-		  <img src="img/second_test_images/image1.png">
-		  <img src="img/second_test_images/image2.png">
-		  <img src="img/second_test_images/image4.png">
-		  <img src="img/second_test_images/image3.png">
-		  <img src="img/second_test_images/image5.png">
-	      </td>
-	      <td width="10%">
+	      <td class="" width="10%">
+		    1: 960円
+		</td>
+		<td class="" width="10%">
+		    2: 240円
+		</td>
+		<td class="" width="10%">
+		    3: 40円
+		</td>
+		<td class="" width="10%">
+		    4: なし
+		</td>
+	      <td class="answer" width="10%">
 		<select class="resultSelect">
-		  <option value="" hidden>B</option>
+		  <option value="" hidden>1</option>
 		</select>
 	      </td>
-	    </tr>
+	      </tr>
 	    <tr>
 		<td colspan="5">
-		  この問題では斜線のある四角が時計回りに順次動いています。右上・右下・左下・左上という順序です。<br>従って、次はまた右上となり、答えは B になります。
+		  <br><br>この問題の結果は 960円となり、答えは 1 になります。
 		</td>
 	    </tr>
-	    <tr><td><br><br></td></tr>
-	    <tr>
-	      <td width="5%"></td>	
-	      <td width="20%" class="questionSpacing" align="right">回答番号→</td>
-	      <td width="25%" class="resultSpacing">
-		<img src="img/second_test_images/図A.png">
-		<img src="img/second_test_images/図B.png">
-		<img src="img/second_test_images/図C.png">
-		<img src="img/second_test_images/図D.png">
-		<img src="img/second_test_images/図E.png">
-	      </td>
-	      <td width="10%" >回答欄</td>
-	    </tr>
-	    <tr>
-	      <td width="5%">例題2</td>	
-	      <td width="20%" class="questionSpacing">
-		  <img src="img/second_test_images/image7.png">
-		  <img src="img/second_test_images/image8.png">
-		  <img src="img/second_test_images/image9.png">
-		  <img src="img/second_test_images/image10.png">
-	      </td>
-	      <td width="25%" class="resultSpacing">
-		  <img src="img/second_test_images/image7.png">
-		  <img src="img/second_test_images/image8.png">
-		  <img src="img/second_test_images/image9.png">
-		  <img src="img/second_test_images/image11.png">
-		  <img src="img/second_test_images/image6.png">
-	      </td>
-	      <td width="10%">
-		<select class="resultSelect">
-		  <option value="" hidden>E</option>
-		</select>
-	      </td>
-	    </tr>
-	    <tr>
-		<td colspan="5">
-		    この問題では縦線が１本ずつ増え、かつ、次第に長くなっています。<br>従って、次は5本線で最も長い線が増えたものとなり、答えは E になります。
-		</td>
-	    </tr>
-	    
 	  </table>
+	  <br><br><br>
 	</div>
       </div>
       <div class="transitionButton">

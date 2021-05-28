@@ -1,5 +1,7 @@
 <?php
 session_start();
+session_destroy();
+session_start();
 
 define("SUCSSESS", 1);
 define("STAT_ERROR", 2);
@@ -43,30 +45,10 @@ function login($userId, $userPass){
     {
       $log_result = LOGIN_ERROR;
       return($log_result);
+    }else{
+        $log_result = SUCSSESS;
+        return($log_result);
     }
-    
-    /*
-     * ログインユーザーの受検状態チェック処理
-     */
-    $Statsql = "select * from user where ID = '".$userId."' AND stat = 0 ;" ;
-
-    $stat_result = false;	
-    $rownums = 0;
-
-    $result = $con->query($Statsql);																					// クエリ発行
-    $rownums = $result->rowCount();
-    //
-    if ($rownums == 0){
-      //既に受検済みであった場合
-      $log_result = STAT_ERROR;
-      return($log_result);
-    }
-    else {
-      //正しいID,Passwordで未受検の場合SUCSSESSで返す
-      $log_result = SUCSSESS;
-      return($log_result);
-    }
-
   } catch (PDOException $e) {
     exit('データベース接続失敗。'.$e->getMessage());
   }
@@ -93,8 +75,7 @@ function statChange(){
   try{
     $con = connectDb();
     $stmt = $con->prepare("UPDATE user SET 
-      test_day = :testDay,
-      stat = 1
+      test_day = :testDay
       WHERE ID = :ID;");
 
     $stmt->bindValue(":ID", $_SESSION["userId"], PDO::PARAM_STR);  
@@ -136,10 +117,7 @@ function statChange(){
     }
     else
     {
-      if($login_result == STAT_ERROR){
-	echo '<script type="text/javascript">alert("ERROR: 既に受検済みです。");</script>';
-      }
-      else if($login_result == LOGIN_ERROR){
+      if($login_result == LOGIN_ERROR){
 	echo '<script type="text/javascript">alert("ERROR: IDかパスワードが違います。");</script>';
       }
     }
@@ -147,6 +125,7 @@ function statChange(){
 ?>
 <html>
 <head>
+<link rel="shortcut icon" href="./img/favicon.ico">
 <title>ログイン - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css.css" rel="stylesheet" type="text/css">
@@ -177,7 +156,10 @@ function statChange(){
       </form>
     </div>
   </div>
+<script>
+window.onload = function(){
+  sessionStorage.removeItem('time');
+}
+</script>
 </body>
-
-
 </html>
