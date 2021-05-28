@@ -185,7 +185,7 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題01</td>	
-		<td class="">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図19.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図20.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図21.png">
@@ -302,8 +302,11 @@ else if($_SESSION["testSection"] === 2){
 	    </table>
 	  </div>
 	</div>
-      <p>第２部　問題数３０問、制限時間は１５分です。</p>
-      <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+      <div>
+      <div class="descButtonText">
+	<p>第２部　問題数３０問、制限時間は１５分です。</p>
+	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+      </div>
       <div class="transitionButton">
 	<button id="nextTestPage" name="next" class="button" >次へ</button>
       </div>
@@ -341,7 +344,7 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題06</td>	
-		<td class="">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image48.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image49.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image50.png">
@@ -457,9 +460,11 @@ else if($_SESSION["testSection"] === 2){
 	    </table>
 	  </div>
 	</div>
-      <p>第２部　問題数３０問、制限時間は１５分です。</p>
-      <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-      <p>「戻る」ボタンで前ページに戻ります。</p>
+      <div class="descButtonText">
+	<p>第２部　問題数３０問、制限時間は１５分です。</p>
+	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	<p>「戻る」ボタンで前ページに戻ります。</p>
+      </div>
       <div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
@@ -504,7 +509,7 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題11</td>	
-		<td class="">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image83.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image84.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image85.png">
@@ -620,9 +625,11 @@ else if($_SESSION["testSection"] === 2){
 	    </table>
 	  </div>
 	</div>
-      <p>第２部　問題数３０問、制限時間は１５分です。</p>
-      <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-      <p>「戻る」ボタンで前ページに戻ります。</p>
+      <div class="descButtonText">
+	<p>第２部　問題数３０問、制限時間は１５分です。</p>
+	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	<p>「戻る」ボタンで前ページに戻ります。</p>
+      </div>
       <div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
@@ -667,7 +674,7 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題16</td>	
-		<td class="">
+		<td
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image120.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image121.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image122.png">
@@ -783,9 +790,11 @@ else if($_SESSION["testSection"] === 2){
 	    </table>
 	  </div>
 	</div>
-      <p>第２部　問題数３０問、制限時間は１５分です。</p>
-      <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-      <p>「戻る」ボタンで前ページに戻ります。</p>
+      <div class="descButtonText">
+	<p>第２部　問題数３０問、制限時間は１５分です。</p>
+	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	<p>「戻る」ボタンで前ページに戻ります。</p>
+      </div>
       <div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
@@ -830,7 +839,7 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題21</td>	
-		<td class="">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image160.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image161.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image162.png">
@@ -946,9 +955,11 @@ else if($_SESSION["testSection"] === 2){
 	    </table>
 	  </div>
 	</div>
-      <p>第２部　問題数３０問、制限時間は１５分です。</p>
-      <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-      <p>「戻る」ボタンで前ページに戻ります。</p>
+      <div class="descButtonText">
+	<p>第２部　問題数３０問、制限時間は１５分です。</p>
+	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	<p>「戻る」ボタンで前ページに戻ります。</p>
+      </div>
       <div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
@@ -993,7 +1004,7 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題26</td>	
-		<td class="">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image204.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image205.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image206.png">
@@ -1109,9 +1120,11 @@ else if($_SESSION["testSection"] === 2){
 	    </table>
 	  </div>
 	</div>
-      <p>第２部　問題数３０問、制限時間は１５分です。</p>
+	<div class="descButtonText">
+	  <p>第２部　問題数３０問、制限時間は１５分です。</p>
 	  <p>「終了」ボタンを押すと、第３部に移ります。</p>
 	  <p>「終了」ボタンを押した後は、第２部に戻ることはできません。</p>
+	</div>
 	<div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <input id="TestPage" type="button" v-on:click="openModal" name="result" class="button" value = "終了" >
@@ -1171,10 +1184,10 @@ else if($_SESSION["testSection"] === 3){
 	      <tr>
 		<td class="number" width="5%"></td>	
 		<td class="questionSpacing" align="right" width="40%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
 		<td width="5%">回答欄</td>
 	      </tr>
 	      <tr>
@@ -1183,16 +1196,16 @@ else if($_SESSION["testSection"] === 3){
 		    よしおは500円持っていて、かずおは400円持っている。<br>よしお、かずお、ゆきおが持っているお金の平均は500円である。<br>ゆきおはいくら持っていますか。
 
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、378ｃｍ
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、395ｃｍ
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、359ｃｍ
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、80ｃｍ
 		</td>';
     
@@ -1209,16 +1222,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="40%">
 		    長い針金から63ｃｍずつ６本切り取ったら、17ｃｍ残った。<br>針金のもとの長さは、どれだけあったでしょう。
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、378ｃｍ
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、395ｃｍ
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、359ｃｍ
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、80ｃｍ
 		</td>';
 	$mondaisu++;
@@ -1235,16 +1248,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="40%">
 		    ゆき子のこづかいは、やす子の４分の３で、4500円である。<br>やす子のこづかいはいくらでしょう。
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、3000円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、4000円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、5000円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、6000円
 		</td>';
 	$mondaisu++;
@@ -1261,16 +1274,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="40%">
 		    定価8000円の品物を１割引で売ったが、まだ原価の２割の利益があった。<br>原価はいくらでしょう。
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、6000円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、8000円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、9000円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、10000円
 		</td>';
 	$mondaisu++;
@@ -1284,8 +1297,10 @@ else if($_SESSION["testSection"] === 3){
 	    </table>
 	  </div>
 	</div>
-	<p>第３部　問題数２０問、制限時間は１３分です。</p>
-	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	<div class="descButtonText">
+	  <p>第３部　問題数２０問、制限時間は１３分です。</p>
+	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	</div>
 	<div class="transitionButton">
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
 	</div>
@@ -1312,10 +1327,10 @@ else if($_SESSION["testSection"] === 3){
 	      <tr>
 		<td class="number" width="5%"></td>	
 		<td class="questionSpacing" align="right" width="40%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
 		<td width="5%">回答欄</td>
 	      </tr>
 	      <tr>
@@ -1323,16 +1338,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="40%">
 		    あきおが40分かかった作業を、かずおは30分でできた。<br>かずおが50分でできた作業をたかしは40分でできた。<br>あきおが30分でできる作業は、たかしは何分でできるでしょう。
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、18分
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、20分
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、22分
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、25分
 		</td>';
 	$mondaisu = 1;
@@ -1349,16 +1364,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="25%">
 		    １個80円のリンゴと１個130円のリンゴを合わせて10個と、100円の夏みかんを1個買ったら1000円であった。<br>80円のリンゴは何個買ったでしょう。
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    1、９個
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    2、８個
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    3、７個
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    4、６個
 		</td>';
 	$mondaisu++;
@@ -1375,16 +1390,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="25%">
 		    横の長さが縦の長さの２倍より１ｃｍ長い長方形の周囲は、38ｃｍである。<br>この長方形の縦の長さはいくらでしょう。
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    1、６ｃｍ
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    2、11ｃｍ
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    3、13ｃｍ
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    4、14ｃｍ
 		</td>';
 	$mondaisu++;
@@ -1401,16 +1416,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="25%">
 		    Ａ、Ｂ２個の歯車がかみ合って回転している。<br>Ａは歯数60、Ｂは50である。<br>Ａが10分間に20回転したとき、Ｂは何回転したでしょう。
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    1、25回転
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    2、19回転
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    3、12回転
 		</td>
-		<td class="" width="7%">
+		<td class="thirdResult">
 		    4、24回転
 		</td>';
 	$mondaisu++;
@@ -1424,9 +1439,11 @@ else if($_SESSION["testSection"] === 3){
 	    </table>
 	  </div>
 	</div>
-	<p>第３部　問題数２０問、制限時間は１３分です。</p>
-	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-	<p>「戻る」ボタンで前ページに戻ります。</p>
+	<div class="descButtonText">
+	  <p>第３部　問題数２０問、制限時間は１３分です。</p>
+	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	  <p>「戻る」ボタンで前ページに戻ります。</p>
+	</div>
 	<div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
@@ -1458,10 +1475,10 @@ else if($_SESSION["testSection"] === 3){
 	      <tr>
 		<td class="number" width="5%"></td>	
 		<td class="questionSpacing" align="right" width="40%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
 		<td width="5%">回答欄</td>
 	      </tr>
 	      <tr>
@@ -1469,16 +1486,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="40%">
 		    ５％の砂糖水を１kg用意して、これを火にかけて水を蒸発させて、10％の砂糖水にするには、<br>水を何g蒸発させればいいでしょう。
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、400g
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、500g
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、600g
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、1000g
 		</td>';
 	$mondaisu = 1;
@@ -1492,19 +1509,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題10</td>	
-		<td class="">
+		<td class="thirdResult">
 		    900立方ｃｍの箱を作ろうとする時、底面積が150平方cmであれば高さはいくらでしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、60cm
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、6cm
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、30cm
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、15cm
 		</td>';
 	$mondaisu++;
@@ -1518,19 +1535,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題11</td>	
-		<td class="">
+		<td class="thirdResult">
 		    木村選手は月曜日から金曜日まで１日４時間、土曜日と日曜日は１日２時間ランニングの練習をする。<br>３週間では、何時間練習することになるでしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、24時間
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、48時間
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、72時間
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、18時間
 		</td>';
 	$mondaisu++;
@@ -1544,19 +1561,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題12</td>	
-		<td class="">
+		<td class="thirdResult">
 		    ６人でやると８時間かかる作業を２時間で終わらせるには何人必要でしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、24人
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、48人
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、８人
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、36人
 		</td>';
 	$mondaisu++;
@@ -1570,9 +1587,11 @@ else if($_SESSION["testSection"] === 3){
 	    </table>
 	  </div>
 	</div>
-	<p>第３部　問題数２０問、制限時間は１３分です。</p>
-	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-	<p>「戻る」ボタンで前ページに戻ります。</p>
+	<div class="descButtonText">
+	  <p>第３部　問題数２０問、制限時間は１３分です。</p>
+	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	  <p>「戻る」ボタンで前ページに戻ります。</p>
+	</div>
 	<div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
@@ -1604,10 +1623,10 @@ else if($_SESSION["testSection"] === 3){
 	      <tr>
 		<td class="number" width="5%"></td>	
 		<td class="questionSpacing" align="right" width="40%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
 		<td width="5%">回答欄</td>
 	      </tr>
 	      <tr>
@@ -1615,16 +1634,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="40%">
 		    ３人の売上げ平均額を7500万円にしたいと思う。<br>Aは8800万円の売上げがあったのに、Bは6500万円であった。<br>では、Cはいくら以上売上げがあれば目標に達するでしょう。
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、8800万円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、7200万円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、8000万円
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、11100万円
 		</td>';
 	$mondaisu = 1;
@@ -1638,19 +1657,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題14</td>	
-		<td class="">
+		<td class="thirdResult">
 		    縦64cm、横112cmの紙から、同じ大きさでできるだけ大きい正方形を切り取ると、何枚になるでしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、22枚
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、24枚
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、26枚
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、28枚
 		</td>';
 	$mondaisu++;
@@ -1664,19 +1683,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題15</td>	
-		<td class="">
+		<td class="thirdResult">
 		    ある会社では５月の売上げ目標を４月の売上額の10％増にした。<br>６月は５月の10％増、７月も同じく６月の10％増にした。<br>７月は予定どおりぴったり、1331億円であった。<br>４月の売上額はいくらであったでしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、1110億円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、990億円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、1000億円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、1210億円
 		</td>';
 	$mondaisu++;
@@ -1691,20 +1710,20 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題16</td>	
-		<td class="">
+		<td class="thirdResult">
 		    １～９を一度ずつ使って、縦・横・斜めの数の和が15となる次の方陣の(a)の数はいくらでしょう。
 		    <br><br><img src="img/third_test_images/image249.png">
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、３
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、４
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、５
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、６
 		</td>';
 	$mondaisu++;
@@ -1718,9 +1737,11 @@ else if($_SESSION["testSection"] === 3){
 	    </table>
 	  </div>
 	</div>
-	<p>第３部　問題数２０問、制限時間は１３分です。</p>
-	<p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-	<p>「戻る」ボタンで前ページに戻ります。</p>
+	<div class="descButtonText">
+	  <p>第３部　問題数２０問、制限時間は１３分です。</p>
+	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
+	  <p>「戻る」ボタンで前ページに戻ります。</p>
+	</div>
 	<div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <button id="nextTestPage" name="next" class="button" >次へ</button>
@@ -1752,10 +1773,10 @@ else if($_SESSION["testSection"] === 3){
 	      <tr>
 		<td class="number" width="5%"></td>	
 		<td class="questionSpacing" align="right" width="40%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
-		<td class="" width="10%"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
+		<td class="thirdResult"></td>
 		<td width="5%">回答欄</td>
 	      </tr>
 	      <tr>
@@ -1763,16 +1784,16 @@ else if($_SESSION["testSection"] === 3){
 		<td class="" width="40%">
 		    縦24cm、横18cmの紙がある。<br>これを並べて、完全な正方形にするには、同じ大きさの紙が最低何枚必要でしょう。
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    1、12枚
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    2、14枚
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    3、16枚
 		</td>
-		<td class="" width="10%">
+		<td class="thirdResult">
 		    4、18枚
 		</td>';
 	$mondaisu = 1;
@@ -1786,19 +1807,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題18</td>	
-		<td class="">
+		<td class="thirdResult">
 		    元金6000万円を日歩３銭で30日間借りると、利息はいくらになるでしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、540万円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、54万円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、180万円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、18万円
 		</td>';
 	$mondaisu++;
@@ -1812,19 +1833,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題19</td>	
-		<td class="">
+		<td class="thirdResult">
 		    A，B，C，D の４人の所持金の平均は22万円である。<br>A，B の２人の平均は18万円でA，B，C の３人の平均は19万円である。<br>では、C，D ２人の平均額はいくらでしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、20万円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、22万円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、24万円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、26万円
 		</td>';
 	$mondaisu++;
@@ -1838,19 +1859,19 @@ else if($_SESSION["testSection"] === 3){
 	      
 	      <tr>
 		<td class="number">問題20</td>	
-		<td class="">
+		<td class="thirdResult">
 		    A は、所持金の30％にあたる4800円で本を買って、残りの半分を貯金した。<br>貯金額はいくらでしょう。
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    1、2800円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    2、5600円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    3、8000円
 		</td>
-		<td class="">
+		<td class="thirdResult">
 		    4、16000円
 		</td>';
 	$mondaisu++;
@@ -1864,9 +1885,11 @@ else if($_SESSION["testSection"] === 3){
 	    </table>
 	  </div>
 	</div>
-	<p>第３部　問題数２０問、制限時間は１３分です。</p>
-	<p>「終了」ボタンを押すと、適性検査を終了します。</p>
-	<p>「終了」ボタンを押した後は、第３部に戻ることはできません。</p>
+	<div class="descButtonText">
+	  <p>第３部　問題数２０問、制限時間は１３分です。</p>
+	  <p>「終了」ボタンを押すと、適性検査を終了します。</p>
+	  <p>「終了」ボタンを押した後は、第３部に戻ることはできません。</p>
+	</div>
 	<div class="transitionButton">
 	  <button id="backTestPage" name="back" class="button" >戻る</button>
 	  <input id="TestPage" type="button" v-on:click="openModal" name="result" class="button" value = "終了" >

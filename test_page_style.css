@@ -79,6 +79,10 @@ p{
     
 }
 
+.descButtonText{
+    display: inline-block;
+}
+
 .button{
     width: 130px;
     height: 30px;
@@ -116,28 +120,24 @@ td{
 
 .number{
     width: 8%;
+    vertical-align: top;
 }
-.question{
-    width: 50%;
-    letter-spacing: 20px;
-    font-family:monospace, serif;
-    font-weight: bold;
-}
+
 .questionSpacing{
     letter-spacing: 5px;
 }
 .imgSpacing{
     margin: 0 10px;
 }
-.result{
-    width: 25%;
-    letter-spacing: 50px;
-    font-family:monospace, serif;
-    font-weight: bold;
-}
+
 .resultSpacing{
     letter-spacing: 5px;
 }
+
+.thirdResult{
+    vertical-align: bottom;
+}
+
 .answer{
     width: 8%;
     padding-right: 30px;
