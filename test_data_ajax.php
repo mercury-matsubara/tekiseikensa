@@ -29,830 +29,134 @@ else if($requestPage === 'back'){
 
 if($_SESSION["testSection"] === 1){
   if($_SESSION["testIndex"] === 1){
-    $html = 
-	'<form id="test_form" name="test_form" action="test_api.php" method="post">
-	  <input type="hidden" name="testNumber" value="first_1">
-	  <h3>【第１部】 本題　　問題01～08</h3>
-	  <div class="workPlace">
-	    <div class="testPlace">    
-	      <table width="100%" class="testTable">
-		<tr>
-		  <td class="number"></td>	
-		  <td class="question" align="right">回答番号→</td>
-		  <td class="result">12345</td>
-		  <td class="answer" >回答欄</td>
-		</tr>
-		<tr><td></td></tr>
-		<tr>
-		  <td class="number">問題01</td>	
-		  <td class="question">eefgghii</td>
-		  <td class="result">fghij</td>
-		  <td class="answer">
-		    <select name="question1" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer1"].'" selected>'.$_SESSION["answer"]["answer1"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題02</td>	
-		  <td class="question">azaybzbyc</td>
-		  <td class="result">acxyz</td>
-		  <td class="answer">
-		    <select name="question2" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer2"].'" selected>'.$_SESSION["answer"]["answer2"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題03</td>	
-		  <td class="question">defdefghi</td>
-		  <td class="result">defgh</td>
-		  <td class="answer">
-		    <select name="question3" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer3"].'" selected>'.$_SESSION["answer"]["answer3"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題04</td>	
-		  <td class="question">cdexyzfghxyz</td>
-		  <td class="result">ijklm</td>
-		  <td class="answer">
-		    <select name="question4" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer4"].'" selected>'.$_SESSION["answer"]["answer4"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題05</td>	
-		  <td class="question">defdegde</td>
-		  <td class="result">dfghi</td>
-		  <td class="answer">
-		    <select name="question5" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer5"].'" selected>'.$_SESSION["answer"]["answer5"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題06</td>	
-		  <td class="question">abczabcyabc</td>
-		  <td class="result">abxyz</td>
-		  <td class="answer">
-		    <select name="question6" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer6"].'" selected>'.$_SESSION["answer"]["answer6"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題07</td>	
-		  <td class="question">fgbhibjkb</td>
-		  <td class="result">belmn</td>
-		  <td class="answer">
-		    <select name="question7" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer7"].'" selected>'.$_SESSION["answer"]["answer7"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題08</td>	
-		  <td class="question">tsrtsrts</td>
-		  <td class="result">rstvw</td>
-		  <td class="answer">
-		    <select name="question8" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer8"].'" selected>'.$_SESSION["answer"]["answer8"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-	      </table>
-	    </div>
-	  </div>
-	  <p>第１部　問題数４０問、制限時間は１０分です。</p>
-	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-	  <div class="transitionButton">
-	    <button id="nextTestPage" name="next" class="button" >次へ</button>
-	  </div>
-	  </form>
-	  <script>
-	    $(function(){
-	      //次へボタン押下時の挙動
-	      $("#nextTestPage").on("click", function(){
-		//回答送信
-		postAnswerData("test_data_ajax.php?page=next");
-	      });
-	    });
-	  </script>';
+      $mondaihani = "01～08";
+      $pagepurasu = 0;
+      
+      //問題文
+      $mondainaiyou[0] = "eefgghii";
+      $mondainaiyou[1] = "azaybzbyc";
+      $mondainaiyou[2] = "defdefghi";
+      $mondainaiyou[3] = "cdexyzfghxyz";
+      $mondainaiyou[4] = "defdegde";
+      $mondainaiyou[5] = "abczabcyabc";
+      $mondainaiyou[6] = "fgbhibjkb";
+      $mondainaiyou[7] = "tsrtsrts";
+      
+      //選択肢
+      $sentaku[0] = "fghij";
+      $sentaku[1] = "acxyz";
+      $sentaku[2] = "defgh";
+      $sentaku[3] = "ijklm";
+      $sentaku[4] = "dfghi";
+      $sentaku[5] = "abxyz";
+      $sentaku[6] = "belmn";
+      $sentaku[7] = "rstvw";
+ 
+      require("firsttestdeta.php"); 
   }
   else if($_SESSION["testIndex"] === 2){
-    $html =
-      '<form id="test_form" name="test_form" action="test_api.php" method="post">
-	<input type="hidden" name="testNumber" value="first_1">
-	  <h3>【第１部】 本題　　問題09～16</h3>
-	  <div class="workPlace">
-	    <div class="testPlace">
-	      <table width="100%" class="testTable">
-		<tr>
-		  <td class="number"></td>	
-		  <td class="question" align="right">回答番号→</td>
-		  <td class="result">12345</td>
-		  <td class="answer" >回答欄</td>
-		</tr>
-		<tr><td></td></tr>
-		<tr>
-		  <td class="number">問題09</td>	
-		  <td class="question">arbsctarb</td>
-		  <td class="result">abcrs</td>
-		  <td class="answer">
-		    <select name="question1" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer9"].'" selected>'.$_SESSION["answer"]["answer9"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題10</td>	
-		  <td class="question">bccdeefg</td>
-		  <td class="result">efghi</td>
-		  <td class="answer">
-		    <select name="question2" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer10"].'" selected>'.$_SESSION["answer"]["answer10"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題11</td>	
-		  <td class="question">efhikl</td>
-		  <td class="result">mnopq</td>
-		  <td class="answer">
-		    <select name="question3" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer11"].'" selected>'.$_SESSION["answer"]["answer11"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題12</td>	
-		  <td class="question">abccdeffg</td>
-		  <td class="result">efghi</td>
-		  <td class="answer">
-		    <select name="question4" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer12"].'" selected>'.$_SESSION["answer"]["answer12"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題13</td>	
-		  <td class="question">amnbopc</td>
-		  <td class="result">depqr</td>
-		  <td class="answer">
-		    <select name="question5" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer13"].'" selected>'.$_SESSION["answer"]["answer13"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題14</td>	
-		  <td class="question">tttssrqqqp</td>
-		  <td class="result">opqrs</td>
-		  <td class="answer">
-		    <select name="question6" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer14"].'" selected>'.$_SESSION["answer"]["answer14"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題15</td>	
-		  <td class="question">ddffhhjj</td>
-		  <td class="result">ijklm</td>
-		  <td class="answer">
-		    <select name="question7" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer15"].'" selected>'.$_SESSION["answer"]["answer15"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題16</td>	
-		  <td class="question">mnmnklopopkl</td>
-		  <td class="result">kopqr</td>
-		  <td class="answer">
-		    <select name="question8" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer16"].'" selected>'.$_SESSION["answer"]["answer16"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-	      </table>  
-	    </div>
-	  </div>
-	  <p>第１部　問題数４０問、制限時間は１０分です。</p>
-	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-	<p>「戻る」ボタンで前ページに戻ります。</p>
-	<div class="transitionButton">
-	  <button id="backTestPage" name="back" class="button" >戻る</button>
-	  <button id="nextTestPage" name="next" class="button" >次へ</button>
-	</div>
-      </form>
-      <script>
-	$(function(){
-	  //次へボタン押下時の挙動
-	  $("#nextTestPage").on("click", function(){
-	    //回答送信
-	    postAnswerData("test_data_ajax.php?page=next");
-	    //問題文さしかえ
-	    //getTestData ("test_data_ajax.php?page=next") ;
-	  });
-	  $("#backTestPage").on("click", function(){
-	    //回答送信
-	    postAnswerData("test_data_ajax.php?page=back");
-	  });
-	});
-      </script>';
+      $mondaihani = "09～16";
+      $pagepurasu = 8;
+      
+      //問題文
+      $mondainaiyou[0] = "arbsctarb";
+      $mondainaiyou[1] = "bccdeefg";
+      $mondainaiyou[2] = "efhikl";
+      $mondainaiyou[3] = "abccdeffg";
+      $mondainaiyou[4] = "amnbopc";
+      $mondainaiyou[5] = "tttssrqqqp";
+      $mondainaiyou[6] = "ddffhhjj";
+      $mondainaiyou[7] = "mnmnklopopkl";
+      
+      //選択肢
+      $sentaku[0] = "abcrs";
+      $sentaku[1] = "efghi";
+      $sentaku[2] = "mnopq";
+      $sentaku[3] = "efghi";
+      $sentaku[4] = "depqr";
+      $sentaku[5] = "opqrs";
+      $sentaku[6] = "ijklm";
+      $sentaku[7] = "kopqr";
+      
+      require("firsttestdeta.php"); 
   }
   else if($_SESSION["testIndex"] === 3){
-    $html =
-      '<form id="test_form" name="test_form" action="test_api.php" method="post">
-	<input type="hidden" name="testNumber" value="first_1">
-	  <h3>【第１部】 本題　　問題17～24</h3>
-	  <div class="workPlace">
-	    <div class="testPlace">
-	      <table width="100%" class="testTable">
-		<tr>
-		  <td class="number"></td>	
-		  <td class="question" align="right">回答番号→</td>
-		  <td class="result">12345</td>
-		  <td class="answer" >回答欄</td>
-		</tr>
-		<tr><td></td></tr>
-		<tr>
-		  <td class="number">問題17</td>	
-		  <td class="question">cddeeefff</td>
-		  <td class="result">efghj</td>
-		  <td class="answer">
-		    <select name="question1" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer17"].'" selected>'.$_SESSION["answer"]["answer17"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題18</td>	
-		  <td class="question">gfed</td>
-		  <td class="result">bcfgh</td>
-		  <td class="answer">
-		    <select name="question2" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer18"].'" selected>'.$_SESSION["answer"]["answer18"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題19</td>	
-		  <td class="question">dfhjl</td>
-		  <td class="result">jklmn</td>
-		  <td class="answer">
-		    <select name="question3" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer19"].'" selected>'.$_SESSION["answer"]["answer19"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題20</td>	
-		  <td class="question">abcijdefij</td>
-		  <td class="result">ghijk</td>
-		  <td class="answer">
-		    <select name="question4" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer20"].'" selected>'.$_SESSION["answer"]["answer20"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題21</td>	
-		  <td class="question">efgefghefghi</td>
-		  <td class="result">egijl</td>
-		  <td class="answer">
-		    <select name="question5" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer21"].'" selected>'.$_SESSION["answer"]["answer21"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題22</td>	
-		  <td class="question">bcbdedfgfhi</td>
-		  <td class="result">fghjk</td>
-		  <td class="answer">
-		    <select name="question6" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer22"].'" selected>'.$_SESSION["answer"]["answer22"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題23</td>	
-		  <td class="question">aababccdc</td>
-		  <td class="result">cdefg</td>
-		  <td class="answer">
-		    <select name="question7" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer23"].'" selected>'.$_SESSION["answer"]["answer23"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題24</td>	
-		  <td class="question">aibcidef</td>
-		  <td class="result">efghi</td>
-		  <td class="answer">
-		    <select name="question8" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer24"].'" selected>'.$_SESSION["answer"]["answer24"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-	      </table>  
-	    </div>
-	  </div>
-	  <p>第１部　問題数４０問、制限時間は１０分です。</p>
-	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-	<p>「戻る」ボタンで前ページに戻ります。</p>
-	<div class="transitionButton">
-	  <button id="backTestPage" name="back" class="button" >戻る</button>
-	  <button id="nextTestPage" name="next" class="button" >次へ</button>
-	</div>
-      </form>
-      <script>
-	$(function(){
-	  //次へボタン押下時の挙動
-	  $("#nextTestPage").on("click", function(){
-	    //回答送信
-	    postAnswerData("test_data_ajax.php?page=next");
-	    //問題文さしかえ
-	    //getTestData ("test_data_ajax.php?page=next") ;
-	  });
-	  $("#backTestPage").on("click", function(){
-	    //回答送信
-	    postAnswerData("test_data_ajax.php?page=back");
-	  });
-	});
-      </script>';
+      $mondaihani = "17～24";
+      $pagepurasu = 16;
+      
+      //問題文
+      $mondainaiyou[0] = "cddeeefff";
+      $mondainaiyou[1] = "gfed";
+      $mondainaiyou[2] = "dfhjl";
+      $mondainaiyou[3] = "abcijdefij";
+      $mondainaiyou[4] = "efgefghefghi";
+      $mondainaiyou[5] = "bcbdedfgfhi";
+      $mondainaiyou[6] = "aababccdc";
+      $mondainaiyou[7] = "aibcidef";
+      
+      //選択肢
+      $sentaku[0] = "efghj";
+      $sentaku[1] = "bcfgh";
+      $sentaku[2] = "jklmn";
+      $sentaku[3] = "ghijk";
+      $sentaku[4] = "egijl";
+      $sentaku[5] = "fghjk";
+      $sentaku[6] = "ijklm";
+      $sentaku[7] = "efghi";
+      
+      require("firsttestdeta.php"); 
   }
   else if($_SESSION["testIndex"] === 4){
-    $html =
-      '<form id="test_form" name="test_form" action="test_api.php" method="post">
-	<input type="hidden" name="testNumber" value="first_1">
-	  <h3>【第１部】 本題　　問題25～32</h3>
-	  <div class="workPlace">
-	    <div class="testPlace">
-	      <table width="100%" class="testTable">
-		<tr>
-		  <td class="number"></td>	
-		  <td class="question" align="right">回答番号→</td>
-		  <td class="result">12345</td>
-		  <td class="answer" >回答欄</td>
-		</tr>
-		<tr><td></td></tr>
-		<tr>
-		  <td class="number">問題25</td>	
-		  <td class="question">cehl</td>
-		  <td class="result">opqrs</td>
-		  <td class="answer">
-		    <select name="question1" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer25"].'" selected>'.$_SESSION["answer"]["answer25"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題26</td>	
-		  <td class="question">abdehimn</td>
-		  <td class="result">pqrst</td>
-		  <td class="answer">
-		    <select name="question2" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer26"].'" selected>'.$_SESSION["answer"]["answer26"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題27</td>	
-		  <td class="question">becfdge</td>
-		  <td class="result">efghi</td>
-		  <td class="answer">
-		    <select name="question3" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer27"].'" selected>'.$_SESSION["answer"]["answer27"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題28</td>	
-		  <td class="question">agbhc</td>
-		  <td class="result">dfghi</td>
-		  <td class="answer">
-		    <select name="question4" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer28"].'" selected>'.$_SESSION["answer"]["answer28"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題29</td>	
-		  <td class="question">adhko</td>
-		  <td class="result">pqrst</td>
-		  <td class="answer">
-		    <select name="question5" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer29"].'" selected>'.$_SESSION["answer"]["answer29"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題30</td>	
-		  <td class="question">efghjklno</td>
-		  <td class="result">pqrst</td>
-		  <td class="answer">
-		    <select name="question6" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer30"].'" selected>'.$_SESSION["answer"]["answer30"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題31</td>	
-		  <td class="question">aeibf</td>
-		  <td class="result">cdgij</td>
-		  <td class="answer">
-		    <select name="question7" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer31"].'" selected>'.$_SESSION["answer"]["answer31"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題32</td>	
-		  <td class="question">aedhg</td>
-		  <td class="result">hijkl</td>
-		  <td class="answer">
-		    <select name="question8" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer32"].'" selected>'.$_SESSION["answer"]["answer32"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-	      </table>  
-	    </div>
-	  </div>
-	  <p>第１部　問題数４０問、制限時間は１０分です。</p>
-	  <p>「次へ」ボタンを押して、次ページへ進んでください。　（次ページから当ページに戻ることもできます。）</p>
-	<p>「戻る」ボタンで前ページに戻ります。</p>
-	<div class="transitionButton">
-	  <button id="backTestPage" name="back" class="button" >戻る</button>
-	  <button id="nextTestPage" name="next" class="button" >次へ</button>
-	</div>
-      </form>
-      <script>
-	$(function(){
-	  //次へボタン押下時の挙動
-	  $("#nextTestPage").on("click", function(){
-	    //回答送信
-	    postAnswerData("test_data_ajax.php?page=next");
-	    //問題文さしかえ
-	    //getTestData ("test_data_ajax.php?page=next") ;
-	  });
-	  $("#backTestPage").on("click", function(){
-	    //回答送信
-	    postAnswerData("test_data_ajax.php?page=back");
-	  });
-	});
-      </script>';
+      $mondaihani = "25～32";
+      $pagepurasu = 24;
+      
+      //問題文
+      $mondainaiyou[0] = "cehl";
+      $mondainaiyou[1] = "abdehimn";
+      $mondainaiyou[2] = "becfdge";
+      $mondainaiyou[3] = "agbhc";
+      $mondainaiyou[4] = "adhko";
+      $mondainaiyou[5] = "efghjklno";
+      $mondainaiyou[6] = "aeibf";
+      $mondainaiyou[7] = "aedhg";
+      
+      //選択肢
+      $sentaku[0] = "opqrs";
+      $sentaku[1] = "pqrst";
+      $sentaku[2] = "efghi";
+      $sentaku[3] = "dfghi";
+      $sentaku[4] = "pqrst";
+      $sentaku[5] = "pqrst";
+      $sentaku[6] = "cdgij";
+      $sentaku[7] = "hijkl";
+      
+      require("firsttestdeta.php"); 
   }
   else if($_SESSION["testIndex"] === 5){
-    $html =
-      '<form id="test_form" name="test_form" action="test_api.php" method="post">
-	<input type="hidden" name="testNumber" value="first_1">
-	  <h3>【第１部】 本題　　問題33～40</h3>
-	  <div class="workPlace">
-	    <div class="testPlace">
-	      <table width="100%" class="testTable">
-		<tr>
-		  <td class="number"></td>	
-		  <td class="question" align="right">回答番号→</td>
-		  <td class="result">12345</td>
-		  <td class="answer" >回答欄</td>
-		</tr>
-		<tr><td></td></tr>
-		<tr>
-		  <td class="number">問題33</td>	
-		  <td class="question">zdwgt</td>
-		  <td class="result">hijkl</td>
-		  <td class="answer">
-		    <select name="question1" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer33"].'"  selected>'.$_SESSION["answer"]["answer33"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題34</td>	
-		  <td class="question">zeiyfjxg</td>
-		  <td class="result">ijklm</td>
-		  <td class="answer">
-		    <select name="question2" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer34"].'" selected>'.$_SESSION["answer"]["answer34"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題35</td>	
-		  <td class="question">cqreuvg</td>
-		  <td class="result">vwxyz</td>
-		  <td class="answer">
-		    <select name="question3" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer35"].'" selected>'.$_SESSION["answer"]["answer35"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題36</td>	
-		  <td class="question">ksjtiuh</td>
-		  <td class="result">vwxyz</td>
-		  <td class="answer">
-		    <select name="question4" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer36"].'" selected>'.$_SESSION["answer"]["answer36"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題37</td>	
-		  <td class="question">rsjtuhvw</td>
-		  <td class="result">cdefg</td>
-		  <td class="answer">
-		    <select name="question5" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer37"].'" selected>'.$_SESSION["answer"]["answer37"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題38</td>	
-		  <td class="question">ieajfbk</td>
-		  <td class="result">cdefg</td>
-		  <td class="answer">
-		    <select name="question6" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer38"].'" selected>'.$_SESSION["answer"]["answer38"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題39</td>	
-		  <td class="question">hebifcj</td>
-		  <td class="result">ghijk</td>
-		  <td class="answer">
-		    <select name="question7" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer39"].'" selected>'.$_SESSION["answer"]["answer39"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-		<tr>
-		  <td class="number">問題40</td>	
-		  <td class="question">njfmiel</td>
-		  <td class="result">dhijm</td>
-		  <td class="answer">
-		    <select name="question8" class="resultSelect">
-		      <option value="'.$_SESSION["answer"]["answer40"].'" selected>'.$_SESSION["answer"]["answer40"].'</option>
-		      <option value="1">1</option>
-		      <option value="2">2</option>
-		      <option value="3">3</option>
-		      <option value="4">4</option>
-		      <option value="5">5</option>
-		    </select>
-		  </td>
-		</tr>
-	      </table>  
-	    </div>
-	  </div>
-	  <p>第１部　問題数４０問、制限時間は１０分です。</p>
-	  <p>「終了」ボタンを押すと、第２部に移ります。</p>
-	  <p>「終了」ボタンを押した後は、第１部に戻ることはできません。</p>
-	<div class="transitionButton">
-	  <button id="backTestPage" name="back" class="button" >戻る</button>
-	  <input id="TestPage" type="button" v-on:click="openModal" name="result" class="button" value = "終了" >
-	</div>
-
-      <div id="overlay" v-show="showContent">
-      <div id="content">
-	<p>終了してよろしいですか？</p>
-	<br><br>
-	<div class="transitionButton">
-	  <input type="submit" name="sectionEnd" v-on:click="onSectionEnd" class="button" value="はい"></input>
-	  <input type="button" v-on:click="closeModal"　class="button" value="いいえ"></input>	  
-	</div>
-      </div>
-      </div>
-      </form>
-      <script>
-	$(function(){
-	  $("#backTestPage").on("click", function(){
-	    //回答送信
-	    postAnswerData("test_data_ajax.php?page=back");
-	  });
-	});
-      </script>
-      <script>
-	new Vue({
-	  el: "#app",
-	  data: {
-	    showContent: false
-	  },
-	  methods:{
-	    openModal: function(){
-	      this.showContent = true;
-	    },
-	    closeModal: function(){
-	      this.showContent = false;
-	    },
-	    onSectionEnd: function(){
-	      count_stop();
-	      sessionStorage.removeItem("time");
-	    }
-	  }
-	});
-      </script>';
+      $mondaihani = "33～40";
+      $pagepurasu = 32;
+      
+      //問題文
+      $mondainaiyou[0] = "zdwgt";
+      $mondainaiyou[1] = "zeiyfjxg";
+      $mondainaiyou[2] = "cqreuvg";
+      $mondainaiyou[3] = "ksjtiuh";
+      $mondainaiyou[4] = "rsjtuhvw";
+      $mondainaiyou[5] = "ieajfdk";
+      $mondainaiyou[6] = "hebifcj";
+      $mondainaiyou[7] = "njfmiel";
+      
+      //選択肢
+      $sentaku[0] = "hijkl";
+      $sentaku[1] = "ijklm";
+      $sentaku[2] = "vwxyz";
+      $sentaku[3] = "vwxyz";
+      $sentaku[4] = "cdefg";
+      $sentaku[5] = "cdefg";
+      $sentaku[6] = "ghijk";
+      $sentaku[7] = "dhijm";
+      
+      require("firsttestdeta.php"); 
   }
 }
 
