@@ -101,7 +101,7 @@ if($_SESSION["testSection"] === 1){
       $sentaku[3] = "ghijk";
       $sentaku[4] = "egijl";
       $sentaku[5] = "fghjk";
-      $sentaku[6] = "ijklm";
+      $sentaku[6] = "cdefg";
       $sentaku[7] = "efghi";
       
       require("firsttestdeta.php"); 
@@ -142,7 +142,7 @@ if($_SESSION["testSection"] === 1){
       $mondainaiyou[2] = "cqreuvg";
       $mondainaiyou[3] = "ksjtiuh";
       $mondainaiyou[4] = "rsjtuhvw";
-      $mondainaiyou[5] = "ieajfdk";
+      $mondainaiyou[5] = "ieajfbk";
       $mondainaiyou[6] = "hebifcj";
       $mondainaiyou[7] = "njfmiel";
       
