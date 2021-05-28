@@ -123,6 +123,12 @@ td{
     vertical-align: top;
 }
 
+.question{
+    width: 50%;
+    letter-spacing: 20px;
+    font-family:monospace, serif;
+    font-weight: bold;
+}
 .questionSpacing{
     letter-spacing: 5px;
 }
@@ -132,6 +138,12 @@ td{
 
 .resultSpacing{
     letter-spacing: 5px;
+}
+.result{
+    width: 25%;
+    letter-spacing: 50px;
+    font-family:monospace, serif;
+    font-weight: bold;
 }
 
 .thirdResult{

@@ -674,7 +674,7 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題16</td>	
-		<td
+		<td class="questionSpacing">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image120.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image121.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image122.png">
