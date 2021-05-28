@@ -150,7 +150,7 @@
 	      <td width="30%" ></td>
 	    </tr>
 	    <tr>
-	      <td width="10%">例題１</td>	
+	      <td width="10%">例題1</td>	
 	      <td width="20%" class="questionSpacing">abababab</td>
 	      <td width="20%" class="resultSpacing">abcde</td>
 	      <td width="5%">

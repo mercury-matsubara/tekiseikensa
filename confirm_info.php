@@ -107,7 +107,7 @@
       <hr class="primary">
     </div>
     <div class="contents">
-      <h3>受験者情報を確認してください。</h3>
+      <h3>受検者情報を確認してください。</h3>
       <table class="loginTable">
 	<tr>
 	  <td>受検者ID</td>
