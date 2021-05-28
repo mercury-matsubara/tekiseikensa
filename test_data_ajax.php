@@ -1161,6 +1161,7 @@ else if($_SESSION["testSection"] === 2){
 }
 else if($_SESSION["testSection"] === 3){
   if($_SESSION["testIndex"] === 1){
+    $mondaipulus = ($_SESSION["testIndex"]-1) * 4;
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第３部】 本題　　問題01～04</h3>
@@ -1193,18 +1194,16 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、80ｃｍ
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer1"].'" selected>'.$_SESSION["answer"]["answer1"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
-	      </tr>
+		</td>';
+    
+	$mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
 	      
+	$html .= '
+	      </tr>
 	      <tr>
 		<td class="number" width="5%">問題02</td>	
 		<td class="" width="40%">
@@ -1221,16 +1220,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、80ｃｍ
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer2"].'" selected>'.$_SESSION["answer"]["answer2"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1249,16 +1246,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、6000円
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer3"].'" selected>'.$_SESSION["answer"]["answer3"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1277,16 +1272,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、10000円
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer4"].'" selected>'.$_SESSION["answer"]["answer4"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>  
 	    </table>
 	  </div>
@@ -1308,6 +1301,8 @@ else if($_SESSION["testSection"] === 3){
       </script>';
   }
   else if($_SESSION["testIndex"] === 2){
+    $mondaipulus = ($_SESSION["testIndex"]-1) * 4;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第３部】 本題　　問題05～08</h3>
@@ -1339,16 +1334,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、25分
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer5"].'" selected>'.$_SESSION["answer"]["answer5"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1367,16 +1360,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="7%">
 		    4、６個
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer6"].'" selected>'.$_SESSION["answer"]["answer6"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1395,16 +1386,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="7%">
 		    4、14ｃｍ
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer7"].'" selected>'.$_SESSION["answer"]["answer7"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1423,16 +1412,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="7%">
 		    4、24回転
-		</td>
-		<td class="answer" width="5%">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer8"].'" selected>'.$_SESSION["answer"]["answer8"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr> 
 	    </table>
 	  </div>
@@ -1460,6 +1447,8 @@ else if($_SESSION["testSection"] === 3){
       </script>';
   }
   else if($_SESSION["testIndex"] === 3){
+    $mondaipulus = ($_SESSION["testIndex"]-1) * 4;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第３部】 本題　　問題09～12</h3>
@@ -1491,16 +1480,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、1000g
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer9"].'" selected>'.$_SESSION["answer"]["answer9"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1519,16 +1506,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、15cm
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer10"].'" selected>'.$_SESSION["answer"]["answer10"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1547,16 +1532,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、18時間
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer11"].'" selected>'.$_SESSION["answer"]["answer11"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1575,16 +1558,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、36人
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer12"].'" selected>'.$_SESSION["answer"]["answer12"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>  
 	    </table>
 	  </div>
@@ -1612,6 +1593,8 @@ else if($_SESSION["testSection"] === 3){
       </script>';
   }
   else if($_SESSION["testIndex"] === 4){
+    $mondaipulus = ($_SESSION["testIndex"]-1) * 4;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第３部】 本題　　問題13～16</h3>
@@ -1643,16 +1626,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、11100万円
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer13"].'" selected>'.$_SESSION["answer"]["answer13"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1671,16 +1652,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、28枚
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer14"].'" selected>'.$_SESSION["answer"]["answer14"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1699,15 +1678,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、1210億円
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer15"].'" selected>'.$_SESSION["answer"]["answer15"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 		</td>
 	      </tr>
 	      
@@ -1728,16 +1706,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、６
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer16"].'" selected>'.$_SESSION["answer"]["answer16"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>   
 	    </table>
 	  </div>
@@ -1765,6 +1741,8 @@ else if($_SESSION["testSection"] === 3){
       </script>';
   }
   else if($_SESSION["testIndex"] === 5){
+    $mondaipulus = ($_SESSION["testIndex"]-1) * 4;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第３部】 本題　　問題17～20</h3>
@@ -1796,16 +1774,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="" width="10%">
 		    4、18枚
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer17"].'" selected>'.$_SESSION["answer"]["answer17"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1824,16 +1800,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、18万円
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer18"].'" selected>'.$_SESSION["answer"]["answer18"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1852,16 +1826,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、26万円
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer19"].'" selected>'.$_SESSION["answer"]["answer19"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>
 	      
 	      <tr>
@@ -1880,16 +1852,14 @@ else if($_SESSION["testSection"] === 3){
 		</td>
 		<td class="">
 		    4、16000円
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer20"].'" selected>'.$_SESSION["answer"]["answer20"].'</option>
-		    <option value="1">1</option>
-		    <option value="2">2</option>
-		    <option value="3">3</option>
-		    <option value="4">4</option>
-		  </select>
-		</td>
+		</td>';
+	$mondaisu++;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("third_test_data.php"); 
+		
+	      
+	$html .= '
 	      </tr>  
 	    </table>
 	  </div>
