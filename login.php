@@ -26,7 +26,7 @@ function login($userId, $userPass){
     /*
      * ユーザー情報の問い合わせ
      */
-    $Loginsql = "select * from user where  ID = '".$userId."' AND password = '".$userPass."' ; ";
+    $Loginsql = "select * from user where  ID = BINARY '".$userId."' AND password = BINARY '".$userPass."' ; ";
     $stmt = $con->prepare("select * from user where  ID = :userId AND password = :userPass ; ");
     
     $stmt->bindValue(":userId", $userId, PDO::PARAM_STR);  
@@ -142,7 +142,7 @@ function statChange(){
       <form action="login.php" method="post">
 	<table class="loginTable">
 	  <tr>
-	    <td>受験者ID</td>
+	    <td>受検者ID</td>
 	    <td><input class="form-text" size="30" type="text"  name="userId" MAXLENGTH="20"value = ""
 	    ></td>
 	  </tr>
@@ -151,7 +151,7 @@ function statChange(){
 	    <td><input class="form-text" size="30" type="password"  name="userPass" MAXLENGTH="20"></td>
 	  </tr>
 	</table>
-	<p>事前に通知しました受験者IDとパスワードを入力して、「ログイン」ボタンを押してください。<p/>
+	<p>事前に通知しました受検者IDとパスワードを入力して、「ログイン」ボタンを押してください。<p/>
 	<input type='submit' name='login' class="button" value = 'ログイン' >
       </form>
     </div>

@@ -106,7 +106,7 @@
 <body>
   <div class="main">
     <div class="header">
-      <img width="60" src="./img/mercury_soft_logo&mark_basic_02.png" >
+      <img src="./img/mercury_soft_logo&mark_basic_02.png" >
       <hr class="primary">
     </div>
     <div class="contents">
