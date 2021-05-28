@@ -163,6 +163,8 @@ if($_SESSION["testSection"] === 1){
 
 else if($_SESSION["testSection"] === 2){
   if($_SESSION["testIndex"] === 1){
+    $mondaipulus = 0;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第２部】 本題　　問題01～05</h3>
@@ -195,19 +197,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図19.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図20.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図26.png">
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer1"].'" selected>'.$_SESSION["answer"]["answer1"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+        
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題02</td>	
 		<td class="questionSpacing">
@@ -222,18 +220,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図29.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image23.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図30.png">
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer2"].'" selected>'.$_SESSION["answer"]["answer2"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
+		</td>';
+        
+        $mondaisu = 2;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+        
+        $html .= 
+		'</td>
 	      </tr>
 	      <tr>
 		<td class="number">問題03</td>	
@@ -249,19 +244,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image26.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image25.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image30.png">
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer3"].'" selected>'.$_SESSION["answer"]["answer3"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 3;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+        
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題04</td>	
 		<td class="questionSpacing">
@@ -276,19 +267,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image34.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image33.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image36.png">
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer4"].'" selected>'.$_SESSION["answer"]["answer4"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 4;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+        
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題05</td>	
 		<td class="questionSpacing">
@@ -303,19 +290,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image45.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image46.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image47.png">
-		</td>
-		<td class="answer">
-		  <select name="question5"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer5"].'" selected>'.$_SESSION["answer"]["answer5"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 5;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+        
+        $html .= 
+	      '</tr>
 	    </table>
 	  </div>
 	</div>
@@ -336,6 +319,8 @@ else if($_SESSION["testSection"] === 2){
       </script>';
   }
   else if($_SESSION["testIndex"] === 2){
+    $mondaipulus = 5;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第２部】 本題　　問題06～10</h3>
@@ -368,19 +353,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image54.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image50.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image55.png">
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer6"].'" selected>'.$_SESSION["answer"]["answer6"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+    
+        $mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題07</td>	
 		<td class="questionSpacing">
@@ -395,19 +376,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image62.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image63.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image64.png">
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer7"].'" selected>'.$_SESSION["answer"]["answer7"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 2;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題08</td>	
 		<td class="questionSpacing">
@@ -422,19 +399,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image68.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image69.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image65.png">
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer8"].'" selected>'.$_SESSION["answer"]["answer8"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 3;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題09</td>	
 		<td class="questionSpacing">
@@ -449,19 +422,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image76.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image77.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image78.png">
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer9"].'" selected>'.$_SESSION["answer"]["answer9"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 4;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題10</td>	
 		<td class="questionSpacing">
@@ -476,19 +445,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image80.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image81.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image82.png">
-		</td>
-		<td class="answer">
-		  <select name="question5"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer10"].'" selected>'.$_SESSION["answer"]["answer10"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 5;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	    </table>
 	  </div>
 	</div>
@@ -517,6 +482,8 @@ else if($_SESSION["testSection"] === 2){
       </script>';
   }
   else if($_SESSION["testIndex"] === 3){
+    $mondaipulus = 10;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第２部】 本題　　問題11～15</h3>
@@ -549,19 +516,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image88.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image89.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image90.png">
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer11"].'" selected>'.$_SESSION["answer"]["answer11"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+    
+        $mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題12</td>	
 		<td class="questionSpacing">
@@ -576,19 +539,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image95.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image96.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image91.png">
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer12"].'" selected>'.$_SESSION["answer"]["answer12"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 2;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題13</td>	
 		<td class="questionSpacing">
@@ -603,19 +562,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image103.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image98.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image104.png">
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer13"].'" selected>'.$_SESSION["answer"]["answer13"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 3;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題14</td>	
 		<td class="questionSpacing">
@@ -630,19 +585,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image109.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image110.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image106.png">
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer14"].'" selected>'.$_SESSION["answer"]["answer14"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 4;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題15</td>	
 		<td class="questionSpacing">
@@ -657,19 +608,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image117.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image118.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image119.png">
-		</td>
-		<td class="answer">
-		  <select name="question5"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer15"].'" selected>'.$_SESSION["answer"]["answer15"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 5;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	    </table>
 	  </div>
 	</div>
@@ -698,6 +645,8 @@ else if($_SESSION["testSection"] === 2){
       </script>';
   }
   else if($_SESSION["testIndex"] === 4){
+    $mondaipulus = 15;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第２部】 本題　　問題16～20</h3>
@@ -730,19 +679,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image126.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image127.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image128.png">
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer16"].'" selected>'.$_SESSION["answer"]["answer16"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+    
+        $mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題17</td>	
 		<td class="questionSpacing">
@@ -757,19 +702,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image135.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image136.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image132.png">
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer17"].'" selected>'.$_SESSION["answer"]["answer17"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 2;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題18</td>	
 		<td class="questionSpacing">
@@ -784,19 +725,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image139.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image141.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image125.png">
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer18"].'" selected>'.$_SESSION["answer"]["answer18"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 3;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題19</td>	
 		<td class="questionSpacing">
@@ -811,19 +748,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image148.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image149.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image150.png">
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer19"].'" selected>'.$_SESSION["answer"]["answer19"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 4;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題20</td>	
 		<td class="questionSpacing">
@@ -838,19 +771,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image157.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image158.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image159.png">
-		</td>
-		<td class="answer">
-		  <select name="question5"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer20"].'" selected>'.$_SESSION["answer"]["answer20"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 5;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .=
+	      '</tr>
 	    </table>
 	  </div>
 	</div>
@@ -879,6 +808,8 @@ else if($_SESSION["testSection"] === 2){
       </script>';
   }
   else if($_SESSION["testIndex"] === 5){
+    $mondaipulus = 20;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第２部】 本題　　問題21～25</h3>
@@ -911,19 +842,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image166.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image167.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image168.png">
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer21"].'" selected>'.$_SESSION["answer"]["answer21"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+    
+        $mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題22</td>	
 		<td class="questionSpacing">
@@ -938,19 +865,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image175.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image176.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image177.png">
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer22"].'" selected>'.$_SESSION["answer"]["answer22"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 2;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .=
+	      '</tr>
 	      <tr>
 		<td class="number">問題23</td>	
 		<td class="questionSpacing">
@@ -965,19 +888,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image183.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image184.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image185.png">
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer23"].'" selected>'.$_SESSION["answer"]["answer23"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 3;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題24</td>	
 		<td class="questionSpacing">
@@ -992,19 +911,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image192.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image193.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image194.png">
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer24"].'" selected>'.$_SESSION["answer"]["answer24"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 4;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題25</td>	
 		<td class="questionSpacing">
@@ -1019,19 +934,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image201.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image202.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image203.png">
-		</td>
-		<td class="answer">
-		  <select name="question5"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer25"].'" selected>'.$_SESSION["answer"]["answer25"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 5;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .=
+	      '</tr>
 	    </table>
 	  </div>
 	</div>
@@ -1060,6 +971,8 @@ else if($_SESSION["testSection"] === 2){
       </script>';
   }
   else if($_SESSION["testIndex"] === 6){
+    $mondaipulus = 25;
+    
     $html = '<form id="test_form" name="test_form" action="test_api.php" method="post">
 	<input type="hidden" name="testNumber" value="first_1">
 	<h3>【第２部】 本題　　問題26～30</h3>
@@ -1092,19 +1005,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image210.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image211.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image212.png">
-		</td>
-		<td class="answer">
-		  <select name="question1"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer26"].'" selected>'.$_SESSION["answer"]["answer26"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+    
+        $mondaisu = 1;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .=
+	      '</tr>
 	      <tr>
 		<td class="number">問題27</td>	
 		<td class="questionSpacing">
@@ -1119,19 +1028,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image219.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image220.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image221.png">
-		</td>
-		<td class="answer">
-		  <select name="question2"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer27"].'" selected>'.$_SESSION["answer"]["answer27"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+
+        $mondaisu = 2;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .= 
+	      '</tr>
 	      <tr>
 		<td class="number">問題28</td>	
 		<td class="questionSpacing">
@@ -1146,19 +1051,15 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image228.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image230.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image229.png">
-		</td>
-		<td class="answer">
-		  <select name="question3"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer28"].'" selected>'.$_SESSION["answer"]["answer28"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 3;
+        $mondainumber = $mondaipulus + $mondaisu;
+       
+        require("secondtestdeta.php"); 
+
+        $html .=
+	      '</tr>
 	      <tr>
 		<td class="number">問題29</td>	
 		<td class="questionSpacing">
@@ -1173,19 +1074,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image237.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image238.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image239.png">
-		</td>
-		<td class="answer">
-		  <select name="question4"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer29"].'" selected>'.$_SESSION["answer"]["answer29"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+        
+        $mondaisu = 4;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .=
+	      '</tr>
 	      <tr>
 		<td class="number">問題30</td>	
 		<td class="questionSpacing">
@@ -1200,19 +1097,15 @@ else if($_SESSION["testSection"] === 2){
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image246.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image247.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image248.png">
-		</td>
-		<td class="answer">
-		  <select name="question5"  class="resultSelect">
-		    <option value="'.$_SESSION["answer"]["answer30"].'" selected>'.$_SESSION["answer"]["answer30"].'</option>
-		      
-		    <option value="A">A</option>
-		    <option value="B">B</option>
-		    <option value="C">C</option>
-		    <option value="D">D</option>
-		    <option value="E">E</option>
-		 </select>
-		</td>
-	      </tr>
+		</td>';
+
+        $mondaisu = 5;
+        $mondainumber = $mondaipulus + $mondaisu;
+        
+        require("secondtestdeta.php"); 
+
+        $html .=
+	      '</tr>
 	    </table>
 	  </div>
 	</div>
