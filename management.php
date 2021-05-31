@@ -154,9 +154,9 @@
             {
                 $html = '<form action="management.php" method="post">';
                 $html .='<tr>';
-                $html .='<td class ="henkou"><input type="text" name = "ichiranuserid" class = "output"size ="10" value ="'.$val['ID'].'" onchange=change()></td>';
-                $html .='<td class ="henkou"><input type="text" name = "ichirannamekan" class = "output" size ="15"value ="'.$val['name_kanji'].'" onchange=change()></td>';
-                $html .='<td class ="henkou"><input type="text" name = "ichirannamekana" class = "output" size ="15" value ="'.$val['name_kana'].'" onchange=change()></td>';
+                $html .='<td class ="henkou"><input type="text"  required="required" name = "ichiranuserid" class = "output"size ="10" value ="'.$val['ID'].'" onchange=change()></td>';
+                $html .='<td class ="henkou"><input type="text" pattern=".{1,20}" title="20文字以内で入力してください" name = "ichirannamekan" class = "output" size ="15"value ="'.$val['name_kanji'].'" onchange=change()></td>';
+                $html .='<td class ="henkou"><input type="text" pattern=".{1,20}" title="20文字以内で入力してください" name = "ichirannamekana" class = "output" size ="15" value ="'.$val['name_kana'].'" onchange=change()></td>';
                 $html .='<td>'.$val['password'].'</td>';
                 $html .='<td class ="henkou"><input type="text" name = "ichiranyear" class = "output" size ="10" value ="'.$val['recruit_year'].'" onchange=change()></td>';
 
@@ -228,17 +228,43 @@
     }
     
     //新規登録
-    if(isset($_POST['new']))
-    {
+    if(isset($_POST['new'])){
         //受検者IDが未入力の時
         if($_POST['userid'] == "")
         {
-            echo "<script>alert('受検者IDが未入力です');</script>";
-            echo '<script type="text/javascript">';
-            echo "<!--\n";
-            echo 'location.href = "management.php"';
-            echo '// -->';
-            echo '</script>';
+            $nyuryokumsg = "※受検者IDが未入力です。";
+            $newyear = "";
+            $newid = "";
+            $newnamekan = "";
+            $newnamekana = "";
+            $newpass = "";
+        }
+        else if(mb_strlen($_POST['userid']) > 20)
+        {
+            $nyuryokumsg = "※受検者IDは20文字以内で入力してください";
+            $newyear = "";
+            $newid = "";
+            $newnamekan = "";
+            $newnamekana = "";
+            $newpass = "";
+        }
+        else if(mb_strlen($_POST['namekan']) > 20)
+        {
+            $nyuryokumsg = "※氏名(漢字)は20文字以内で入力してください";
+            $newyear = "";
+            $newid = "";
+            $newnamekan = "";
+            $newnamekana = "";
+            $newpass = "";
+        }
+        else if(mb_strlen($_POST['namekana']) > 20)
+        {
+            $nyuryokumsg = "※氏名(カナ)は20文字以内で入力してください";
+            $newyear = "";
+            $newid = "";
+            $newnamekan = "";
+            $newnamekana = "";
+            $newpass = "";
         }
         else
         {
@@ -275,15 +301,17 @@
             
             if($rownums != 0)
             {
-                echo "<script>alert('受検者IDが重複しています');</script>";
-                echo '<script type="text/javascript">';
-                echo "<!--\n";
-                echo 'location.href = "management.php"';
-                echo '// -->';
-                echo '</script>';
+                $nyuryokumsg = "受検者IDが重複しています";
+                $newyear = "";
+                $newid = "";
+                $newnamekan = "";
+                $newnamekana = "";
+                $newpass = "";
             }
             else
             {
+                //正常値なので空白を表示する
+                $nyuryokumsg = "";
                 $newid = $_POST['userid'];
                 $newregistrationdate = date('Y/m/d');
 
@@ -614,25 +642,29 @@
                             年卒
                         </td>
                         <td></td>
-                        <td align = "right">
+                        <td align='right'>
                             <input type='submit' name='new' class='managebutton' value = '新規登録' style="WIDTH: 100px; HEIGHT: 30px">
-                            発行パスワード
-                            <input type='text' name='pass' class='register' style="WIDTH: 150px; HEIGHT: 30px" disabled=""
-                                   value = "<?php  if(isset($_POST['new'])){echo $newpass;} ?>">
                         </td>
-                        <td></td>
+                        <td>
+                            <font color='red'>
+                                <span><?php if(isset($_POST['new'])){ echo $nyuryokumsg; } ?></span>
+                            <font>
+                        </td>
                     </tr>
                     <tr>
                         <td>受検者ID</td>
                         <td colspan="4">
                             <input type='tel' name='userid' class='register' style="WIDTH: 300px; HEIGHT: 30px" 
                                    value = "<?php  if(isset($_POST['new'])){echo $newid;} elseif(isset($_POST['search'])){echo $_SESSION['search_id'];}?>">
+                            発行パスワード
+                            <input type='text' name='pass' class='register' style="WIDTH: 150px; HEIGHT: 30px" disabled=""
+                                   value = "<?php  if(isset($_POST['new'])){echo $newpass;} ?>">
                         </td>
                     </tr>
                     <tr>
                         <td>氏名（漢字）</td>
                         <td colspan="4">
-                            <input type='text' name='namekan' class='register' style="WIDTH: 300px; HEIGHT: 30px" 
+                            <input type='text' name='namekan' class='register' style="WIDTH: 300px; HEIGHT: 30px"
                                     value = "<?php  if(isset($_POST['new'])){echo $newnamekan;} elseif(isset($_POST['search'])){echo $_SESSION['search_kanji'];}?>">
                         </td>
                     </tr>
