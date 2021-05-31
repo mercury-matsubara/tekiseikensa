@@ -147,8 +147,14 @@
 		</td>
 	    </tr>
 	  </table>
-	  <br><br><br>
+	  <br><br>
 	</div>
+      </div>
+      <div class="descButtonText">
+	<h4>計算用紙を準備してください。</h4>
+	<h4>電卓等の自動計算機は使用禁止です。</h4>
+	<p>それでは、第３部の本題に入ります。　問題数は２０問、制限時間は１３分です。</p>
+	<p>「次へ」ボタンを押して、本題を始めてください。</p>
       </div>
       <div class="transitionButton">
 	<input type='button' onclick="location.href='./third_test.php'" name='next' class="button" value = '次へ' >

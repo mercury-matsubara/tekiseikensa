@@ -174,7 +174,7 @@ else if($_SESSION["testSection"] === 2){
 	      <tr>
 		<td class="number"></td>
 		<td class="questionSpacing" align="right">回答番号→</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図A.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図B.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図C.png">
@@ -191,7 +191,7 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図21.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図22.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図21.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図22.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図19.png">
@@ -208,13 +208,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題02</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図27.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図28.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図29.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図30.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image21.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image22.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/図29.png">
@@ -232,13 +232,13 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題03</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image24.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image25.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image26.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image27.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image28.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image29.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image26.png">
@@ -255,13 +255,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題04</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image31.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image32.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image34.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image35.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image38.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image37.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image34.png">
@@ -278,13 +278,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題05</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image39.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image40.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image41.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image42.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image43.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image44.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image45.png">
@@ -333,7 +333,7 @@ else if($_SESSION["testSection"] === 2){
 	      <tr>
 		<td class="number"></td>
 		<td class="questionSpacing" align="right">回答番号→</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図A.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図B.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図C.png">
@@ -350,7 +350,7 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image50.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image51.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image52.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image53.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image54.png">
@@ -367,13 +367,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題07</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image56.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image57.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image58.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image59.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image60.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image61.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image62.png">
@@ -390,13 +390,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題08</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image65.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image66.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image65.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image66.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image67.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image66.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image68.png">
@@ -413,13 +413,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題09</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image70.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image71.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image73.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image72.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image74.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image75.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image76.png">
@@ -436,13 +436,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題10</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image79.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image80.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image81.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image82.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image79.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image82.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image80.png">
@@ -498,7 +498,7 @@ else if($_SESSION["testSection"] === 2){
 	      <tr>
 		<td class="number"></td>
 		<td class="questionSpacing" align="right">回答番号→</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図A.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図B.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図C.png">
@@ -515,7 +515,7 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image85.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image86.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image83.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image87.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image88.png">
@@ -532,13 +532,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題12</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image91.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image92.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image93.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image94.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image97.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image93.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image95.png">
@@ -555,13 +555,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題13</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image98.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image99.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image100.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image99.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image101.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image102.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image103.png">
@@ -578,13 +578,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題14</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image105.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image106.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image107.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image108.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image105.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image107.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image109.png">
@@ -601,13 +601,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題15</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image111.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image112.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image113.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image114.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image115.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image116.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image117.png">
@@ -663,7 +663,7 @@ else if($_SESSION["testSection"] === 2){
 	      <tr>
 		<td class="number"></td>
 		<td class="questionSpacing" align="right">回答番号→</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図A.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図B.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図C.png">
@@ -674,13 +674,13 @@ else if($_SESSION["testSection"] === 2){
 	      </tr>
 	      <tr>
 		<td class="number">問題16</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image120.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image121.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image122.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image123.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image124.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image125.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image126.png">
@@ -697,13 +697,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題17</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image129.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image130.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image131.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image132.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image133.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image134.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image135.png">
@@ -720,13 +720,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題18</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image137.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image128.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image140.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image127.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image138.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image128.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image139.png">
@@ -743,13 +743,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題19</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image142.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image143.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image144.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image145.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image146.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image147.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image148.png">
@@ -766,13 +766,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題20</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image151.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image152.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image153.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image154.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image155.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image156.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image157.png">
@@ -828,7 +828,7 @@ else if($_SESSION["testSection"] === 2){
 	      <tr>
 		<td class="number"></td>
 		<td class="questionSpacing" align="right">回答番号→</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図A.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図B.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図C.png">
@@ -845,7 +845,7 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image162.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image163.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image164.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image165.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image166.png">
@@ -862,13 +862,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題22</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image169.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image170.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image171.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image172.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image173.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image174.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image175.png">
@@ -885,13 +885,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題23</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image178.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image179.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image180.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image181.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image180.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image182.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image183.png">
@@ -908,13 +908,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題24</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image186.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image187.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image188.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image189.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image190.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image191.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image192.png">
@@ -931,13 +931,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題25</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image195.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image196.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image197.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image198.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image199.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image200.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image201.png">
@@ -993,7 +993,7 @@ else if($_SESSION["testSection"] === 2){
 	      <tr>
 		<td class="number"></td>
 		<td class="questionSpacing" align="right">回答番号→</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図A.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図B.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/図C.png">
@@ -1010,7 +1010,7 @@ else if($_SESSION["testSection"] === 2){
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image206.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image207.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image208.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image209.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image210.png">
@@ -1027,13 +1027,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題27</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image213.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image214.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image215.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image216.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image217.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image218.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image219.png">
@@ -1050,13 +1050,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題28</td>	
-		<td class="questionSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image222.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image223.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image224.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image225.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image226.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image227.png">
 		    <img width="70" class="imgSpacing" src="img/second_test_images/image228.png">
@@ -1073,13 +1073,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題29</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image231.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image232.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image233.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image234.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image235.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image236.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image237.png">
@@ -1096,13 +1096,13 @@ else if($_SESSION["testSection"] === 2){
 	      '</tr>
 	      <tr>
 		<td class="number">問題30</td>	
-		<td class="questionSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image240.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image241.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image242.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image243.png">
 		</td>
-		<td class="resultSpacing">
+		<td>
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image244.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image245.png">
 		  <img width="70" class="imgSpacing" src="img/second_test_images/image246.png">

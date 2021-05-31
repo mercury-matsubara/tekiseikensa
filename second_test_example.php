@@ -201,6 +201,10 @@
 	  </table>
 	</div>
       </div>
+      <div class="descButtonText">
+	<p>それでは、第２部の本題に入ります。　問題数は３０問、制限時間は１５分です。</p>
+	<p>「次へ」ボタンを押して、本題を始めてください。</p>
+      </div>
       <div class="transitionButton">
 	<input type='button' onclick="location.href='./second_test.php'" name='next' class="button" value = '次へ' >
       </div>

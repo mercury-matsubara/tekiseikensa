@@ -197,10 +197,14 @@
 	</div>
       </div>
       <form action="first_test_example.php" method="post">
-      <div class="transitionButton">
-	<input type='submit' name='back' class="button" value = '戻る' >
-	<input type='button' onclick="location.href='./first_test.php'" name='next' class="button" value = '次へ' >
-      </div>
+	<div class="descButtonText">
+	  <p>それでは、第１部の本題に入ります。　問題数は４０問、制限時間は１０分です。</p>
+	  <p>「次へ」ボタンを押して、本題を始めてください。</p>
+	</div>
+	<div class="transitionButton">
+	  <input type='submit' name='back' class="button" value = '戻る' >
+	  <input type='button' onclick="location.href='./first_test.php'" name='next' class="button" value = '次へ' >
+	</div>
       </form>
     </div>
   </div>

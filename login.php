@@ -1,7 +1,6 @@
 <?php
 session_start();
-session_destroy();
-session_start();
+$_SESSION = array() ;
 
 define("SUCSSESS", 1);
 define("STAT_ERROR", 2);
