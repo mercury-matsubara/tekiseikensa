@@ -52,7 +52,7 @@ function postAnswerData(URL){
         let $form = $(this);
 
         // 送信ボタンを取得
-        var $button = $form.find("button");
+        var $button = $("#nextTestPage");
 
         // 送信
         $.ajax({

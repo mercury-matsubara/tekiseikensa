@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+define("FIRST_MAX", 5);
+define("SECOND_MAX", 6);
+define("THIRD_MAX", 5);
+
 //ログイン画面にリダイレクトさせる関数
 function redirectLogin(){
   echo '<script type="text/javascript">';
@@ -20,13 +24,40 @@ if(!isset($_SESSION["userId"])){
 $requestPage = filter_input(INPUT_GET, 'page');
 $html = "";
 
+//ページ保存用セッション変数をリクエストによって増減させる処理
+//もし最初のページだった場合や最後のページだった場合には増減を制限する
 if($requestPage === 'next'){
-  $_SESSION["testIndex"]++;
+  if($_SESSION["testSection"] == 1){
+    if($_SESSION["testIndex"] < FIRST_MAX){
+      $_SESSION["testIndex"]++;
+    }
+  }else if($_SESSION["testSection"] ==2){
+    if($_SESSION["testIndex"] < SECOND_MAX){
+      $_SESSION["testIndex"]++;
+    }
+  }else if($_SESSION["testSection"] ==3){
+    if($_SESSION["testIndex"] < THIRD_MAX){
+      $_SESSION["testIndex"]++;
+    }
+  }
 }
 else if($requestPage === 'back'){
-  $_SESSION["testIndex"]--;
+  if($_SESSION["testSection"] == 1){
+    if($_SESSION["testIndex"] > 1){
+      $_SESSION["testIndex"]--;
+    }
+  }else if($_SESSION["testSection"] ==2){
+    if($_SESSION["testIndex"] > 1){
+      $_SESSION["testIndex"]--;
+    }
+  }else if($_SESSION["testSection"] ==3){
+    if($_SESSION["testIndex"] > 1){
+      $_SESSION["testIndex"]--;
+    }
+  }
 }
 
+//問題文を構築する処理
 if($_SESSION["testSection"] === 1){
   if($_SESSION["testIndex"] === 1){
       $mondaihani = "01～08";
