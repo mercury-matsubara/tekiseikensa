@@ -1197,16 +1197,16 @@ else if($_SESSION["testSection"] === 3){
 
 		</td>
 		<td class="thirdResult">
-		    1、378ｃｍ
+		    1、300円
 		</td>
 		<td class="thirdResult">
-		    2、395ｃｍ
+		    2、500円
 		</td>
 		<td class="thirdResult">
-		    3、359ｃｍ
+		    3、600円
 		</td>
 		<td class="thirdResult">
-		    4、80ｃｍ
+		    4、50円
 		</td>';
     
 	$mondaisu = 1;
