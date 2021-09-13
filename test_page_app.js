@@ -1,27 +1,30 @@
 let interval_id;
 
 function timerStart(time){
-    //時間をWebストレージに保存
-    //問題各部が終わるタイミングでtimeを破棄しないといけないです
+    let min = 0;
+    let sec = 0;
+    
+    //タイマーセッション変数を初期化
     if(!sessionStorage.getItem('time')){
         sessionStorage.setItem('time', time);
     }
+    
+    var self = this;
 
-    let min = 0;
-    let sec = 0;
-    //カウント処理開始
-    count_start();
-    function count_start(){
-        //1秒単位で処理実行
-        interval_id = setInterval(count_down , 1000);
-    }
+    //WebWorkerでカウントダウン
+    this._timer = new Worker('worker.js');
+    this._timer.onmessage = function(e){
+        count_down();
+    };
+    this._timer.postMessage('start');
+
     function count_down(){
         //ログ出力
         console.log( Number(sessionStorage.getItem('time')));
         //タイマー処理
         if ( Number(sessionStorage.getItem('time')) === 1 ){
             //時間経過したら処理実行
-            count_stop();
+            this._timer.postMessage('stop');
             window.alert('終了時間です。'); 
             timeUpPostAnswerData("test_api.php");
         }else{
@@ -36,10 +39,6 @@ function timerStart(time){
             }
         }
     }
-}
-
-function count_stop(){
-    clearInterval(interval_id);
 }
 
 function postAnswerData(URL){
@@ -95,7 +94,7 @@ function timeUpPostAnswerData(URL){
     $("#test_form").append($('<input />', {
         type: 'hidden',
         name: 'sectionEnd',
-        value: 'sectionEnd',
+        value: 'sectionEnd'
     }));
     console.log("タイムアップ関数");
     $("#test_form")[0].submit(function(event) {
@@ -111,7 +110,7 @@ function timeUpPostAnswerData(URL){
             url: $form.attr("action"),
             type: $form.attr("method"),
             data: {
-                data: $form.serialize(),
+                data: $form.serialize()
             },
             
             timeout: 10000,  // 単位はミリ秒
