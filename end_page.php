@@ -26,6 +26,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css.css" rel="stylesheet" type="text/css">
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -57,6 +58,19 @@
       closeButtonClicked: function(){
 	location.href = "init.php";
       }
+    },
+    mounted: function(){
+      axios.post('/0_tekiseikensa/mark_test.php', {
+	userId: localStorage.getItem('userId')
+      })
+      .then(function (response) {
+	console.log(response.data);
+	localStorage.removeItem('userId');
+      })
+      .catch(function (error) {
+	console.log(error);
+	localStorage.removeItem('userId');
+      }); 
     }
   });
 </script>

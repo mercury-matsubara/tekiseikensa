@@ -92,5 +92,10 @@
   </div>
 </body>
 
+<script>
+  window.onload = function(){
+    localStorage['userId'] = '<?php echo($_SESSION["userId"]) ?>';
+  }
+</script>
 
 </html>

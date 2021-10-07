@@ -1,3 +1,10 @@
+
+
+<!--
+ 現在使っていません。
+-->
+
+
 <?php
 
   session_start();
@@ -84,7 +91,7 @@
     } catch (PDOException $e) {
       exit('データベース接続失敗。'.$e->getMessage());
     } 
-  }
+  } 
   
   /*
   * 認証情報確認部
@@ -95,7 +102,6 @@
   
   sessionInit();
   statChange();
-
 ?>
 <html>
 <head>]
@@ -181,6 +187,7 @@
     </div>
   </div>
   <script src="blockBack.js"></script>
+  
 </body>
 
 

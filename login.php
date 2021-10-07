@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION = array() ;
-
+   
 define("SUCSSESS", 1);
 define("STAT_ERROR", 2);
 define("LOGIN_ERROR", 3);
@@ -62,6 +62,7 @@ function getInfo($userId){
     $result = $stmt->fetch();
   
     $_SESSION['userId'] = $result["ID"];
+    $_SESSION['userPass'] = $result["password"];
     $_SESSION['userNameKanji'] = $result["name_kanji"];
     $_SESSION['userNameKana'] = $result["name_kana"];
   } catch (PDOException $e) {
@@ -90,34 +91,47 @@ function statChange(){
   //ログイン判定部
   if(isset($_POST['userId']))
   {
-    $userId = $_POST['userId'];
-    $userPass = $_POST['userPass'];
-    $login_result = login($userId,$userPass);
-    
-    if($login_result == SUCSSESS)
-    {
-      if($userId == "mercury"){
-	getInfo($userId);
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "management.php"';
-	echo '// -->';
-	echo '</script>';
-      }
-      else{
-	getInfo($userId);
-	statChange();
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "confirm_info.php"';
-	echo '// -->';
-	echo '</script>';
-      }
+    //再ログイン
+    if(isset($_POST['re'])){
+      $userId = $_POST['userId'];
+      getInfo($userId);
+      echo '<script type="text/javascript">';
+      echo "<!--\n";
+      echo 'location.href = "manual.php"';
+      echo '// -->';
+      echo '</script>';
     }
-    else
-    {
-      if($login_result == LOGIN_ERROR){
-	echo '<script type="text/javascript">alert("ERROR: IDかパスワードが違います。");</script>';
+    //最初のログイン
+    else{
+      $userId = $_POST['userId'];
+      $userPass = $_POST['userPass'];
+      $login_result = login($userId,$userPass);
+
+      if($login_result == SUCSSESS)
+      {
+	if($userId == "mercury"){
+	  getInfo($userId);
+	  echo '<script type="text/javascript">';
+	  echo "<!--\n";
+	  echo 'location.href = "management.php"';
+	  echo '// -->';
+	  echo '</script>';
+	}
+	else{
+	  getInfo($userId);
+	  statChange();
+	  echo '<script type="text/javascript">';
+	  echo "<!--\n";
+	  echo 'location.href = "confirm_info.php"';
+	  echo '// -->';
+	  echo '</script>';
+	}
+      }
+      else
+      {
+	if($login_result == LOGIN_ERROR){
+	  echo '<script type="text/javascript">alert("ERROR: IDかパスワードが違います。");</script>';
+	}
       }
     }
   }
@@ -128,6 +142,7 @@ function statChange(){
 <title>ログイン - 適性検査 | MercurySoft</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
   <div class="main">
@@ -156,9 +171,30 @@ function statChange(){
     </div>
   </div>
 <script>
-window.onload = function(){
-  sessionStorage.removeItem('time');
-}
+  window.onload = function(){
+    sessionStorage.removeItem('time');
+    if(localStorage.getItem('userId') !== null){
+      //formを動的に生成
+      let form = document.createElement('form');
+      form.action = 'login.php';
+      form.method = 'POST';
+      
+      //bodyに追加
+      document.body.append(form);
+      
+      //イベントに関数登録
+      form.addEventListener('formdata', (e) => {
+	var fd = e.formData;
+
+	// データをセット
+	fd.set('userId', localStorage.getItem("userId"));
+	fd.set('re', 're');
+      });
+      
+      // submit
+      form.submit();
+    }
+  }
 </script>
 </body>
 </html>
