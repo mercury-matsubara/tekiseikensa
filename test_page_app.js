@@ -8,19 +8,19 @@ function timerStart(time){
     if(!sessionStorage.getItem('time')){
         sessionStorage.setItem('time', time);
     }
-    
+
     var self = this;
 
     //WebWorkerでカウントダウン
     this._timer = new Worker('worker.js');
     this._timer.onmessage = function(e){
-        count_down();
+            count_down();
     };
     this._timer.postMessage('start');
 
     function count_down(){
         //ログ出力
-        console.log( Number(sessionStorage.getItem('time')));
+        console.log( 'countdown' + Number(sessionStorage.getItem('time')));
         //タイマー処理
         if ( Number(sessionStorage.getItem('time')) === 1 ){
             //時間経過したら処理実行
@@ -158,4 +158,9 @@ function getTestData(URL){
         return false;
 
     });
+}
+
+function count_stop(){
+    this._timer.postMessage('stop');
+    sessionStorage.removeItem("time");
 }

@@ -138,8 +138,8 @@
                   this.showContent = false;
                 },
                 onSectionEnd: function(){
+                  //sessionStorage.removeItem("time");
                   count_stop();
-                  sessionStorage.removeItem("time");
                 }
               }
             });

@@ -102,6 +102,10 @@
     if($_SESSION["testSection"] != 1){
       redirectTestPage($_SESSION["testSection"]);
     }
+    else
+    {
+        sessionInit();
+    }
   }
   else{
     sessionInit();

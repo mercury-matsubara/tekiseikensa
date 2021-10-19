@@ -60,6 +60,8 @@
       //timerStart(9999);//デバック用
   };
 </script>
+  <script src="test_page_app.js"></script>
+  <script src="blockBack.js"></script>
 </head>
 <body>
   <div id="app">
@@ -70,12 +72,10 @@
       </div>
       <div class="contents">
 	<div class="timer" id="timer">
-	  [残り時間]
+	  [残り時間]13分00秒
 	</div>
 	<div id="testDataAjax">
 	</div>
       </div>
-  <script src="test_page_app.js"></script>
-  <script src="blockBack.js"></script>
 </body>
 </html>

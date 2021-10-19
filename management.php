@@ -163,8 +163,8 @@
                 $html .='<td class ="henkou"><input type="date" name = "ichiranregistrationdate" class = "output" size ="8" value ="'.$val['register_day'].'" onchange=change()></td>';
                 $html .='<td class ="henkou"><input type="date" name = "ichirantestdate" class = "output" size ="8" value ="'.$val['test_day'].'" onchange=change()></td>';
                 $html .='<td class ="henkou"><input type="text" name = "ichirangloup" class = "output" size ="8" value ="'.$val['stat'].'" onchange=change()></td>';
-                $html .='<td>'.$val['sum_score'].'</td>';
                 $html .='<td>'.$val['rank_score'].'</td>';
+                $html .='<td>'.$val['sum_score'].'</td>';
                 $html .='<td><input type="submit" name = "hensyu" class ="ichiranhensyubutton" size ="8" value="編集"></td>';
                 $html .='<td><input type="submit" name = "sakuzyo" class ="ichiranhensyubutton" size ="8" value="削除"><input type="hidden" value ="'.$val['userNumber'].'" name ="ichirannum"></td>';
                 $html .='</tr>';
@@ -394,8 +394,8 @@
                 
                 $cnum = $_POST['ichirannum'];
 
-                //受検区分が1または0なら編集を行う、そうでない場合はメッセージを表示
-                if($_POST['ichirangloup'] == 1 || $_POST['ichirangloup'] == 0)
+                //受検区分が0～5なら編集を行う、そうでない場合はメッセージを表示
+                if($_POST['ichirangloup'] == 0 || $_POST['ichirangloup'] == 1 || $_POST['ichirangloup'] == 2 || $_POST['ichirangloup'] == 3 || $_POST['ichirangloup'] == 4 || $_POST['ichirangloup'] == 5)
                 {
                     $cgloup = $_POST['ichirangloup'];
                
@@ -442,7 +442,7 @@
                 }
                 else
                 {
-                    echo "<script>alert('受検区分は0か1を入力してください');</script>";
+                    echo "<script>alert('受検区分は0～5の数字を入力してください');</script>";
                 }
             }
             else

@@ -205,9 +205,13 @@ session_start();
     if($tmpScore < 0){
       $sign = -1;
     }
-    if(($sign != 0) && (($tmpScore % $sign) == 0.75)){
+    $a = $tmpScore - floor($tmpScore);
+    if(($sign != 0) && ($a == 0.75)){
       $totalScore = $tmpScore + 0.25;
     }
+//    if(($sign != 0) && (($tmpScore % $sign) == 0.75)){
+//      $totalScore = $tmpScore + 0.25;
+//    }
     else{
       if($sign < 0){
 	$totalScore = floor($tmpScore) + 1;

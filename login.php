@@ -65,6 +65,7 @@ function getInfo($userId){
     $_SESSION['userPass'] = $result["password"];
     $_SESSION['userNameKanji'] = $result["name_kanji"];
     $_SESSION['userNameKana'] = $result["name_kana"];
+    $_SESSION['stat'] = $result["stat"];
   } catch (PDOException $e) {
     exit('データベース接続失敗。'.$e->getMessage());
   } 
@@ -95,11 +96,38 @@ function statChange(){
     if(isset($_POST['re'])){
       $userId = $_POST['userId'];
       getInfo($userId);
-      echo '<script type="text/javascript">';
-      echo "<!--\n";
-      echo 'location.href = "manual.php"';
-      echo '// -->';
-      echo '</script>';
+      if($_SESSION['stat'] == 1)
+      {
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "manual.php"';
+        echo '// -->';
+        echo '</script>';
+      }
+      elseif($_SESSION['stat'] == 2)
+      {
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "first_test_example.php"';
+        echo '// -->';
+        echo '</script>';          
+      }
+      elseif($_SESSION['stat'] == 3)
+      {
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "second_test_example.php"';
+        echo '// -->';
+        echo '</script>';          
+      }
+      elseif($_SESSION['stat'] == 4)
+      {
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "third_test_example.php"';
+        echo '// -->';
+        echo '</script>';          
+      }    
     }
     //最初のログイン
     else{
@@ -109,29 +137,29 @@ function statChange(){
 
       if($login_result == SUCSSESS)
       {
-	if($userId == "mercury"){
-	  getInfo($userId);
-	  echo '<script type="text/javascript">';
-	  echo "<!--\n";
-	  echo 'location.href = "management.php"';
-	  echo '// -->';
-	  echo '</script>';
-	}
-	else{
-	  getInfo($userId);
-	  statChange();
-	  echo '<script type="text/javascript">';
-	  echo "<!--\n";
-	  echo 'location.href = "confirm_info.php"';
-	  echo '// -->';
-	  echo '</script>';
-	}
+        if($userId == "mercury"){
+          getInfo($userId);
+          echo '<script type="text/javascript">';
+          echo "<!--\n";
+          echo 'location.href = "management.php"';
+          echo '// -->';
+          echo '</script>';
+        }        
+        else{
+            getInfo($userId);
+            statChange();
+            echo '<script type="text/javascript">';
+            echo "<!--\n";
+            echo 'location.href = "confirm_info.php"';
+            echo '// -->';
+            echo '</script>';
+        }
       }
       else
       {
-	if($login_result == LOGIN_ERROR){
-	  echo '<script type="text/javascript">alert("ERROR: IDかパスワードが違います。");</script>';
-	}
+        if($login_result == LOGIN_ERROR){
+          echo '<script type="text/javascript">alert("ERROR: IDかパスワードが違います。");</script>';
+        }
       }
     }
   }

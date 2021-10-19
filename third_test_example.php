@@ -49,6 +49,8 @@
   
   function sessionInit(){
     unset($_SESSION["answer"]);
+    $_SESSION["testSection"] = 3;
+    $_SESSION["testIndex"] = 1;
     $_SESSION["answer"]["answer1"] = NULL;
     $_SESSION["answer"]["answer2"] = NULL;
     $_SESSION["answer"]["answer3"] = NULL;
@@ -77,8 +79,14 @@
   if(!isset($_SESSION["userId"])){
     redirectLogin();
   }
-  else if($_SESSION["testSection"] != 3){
-    redirectTestPage($_SESSION["testSection"]);
+  else if(isset($_SESSION["testSection"])){
+    if($_SESSION["testSection"] != 3){
+      redirectTestPage($_SESSION["testSection"]);
+    }
+    else
+    {
+        sessionInit();
+    }
   }
   else{
     sessionInit();

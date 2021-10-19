@@ -50,6 +50,50 @@
   elseif(isset($_SESSION["testSection"])){
     redirectTestPage($_SESSION["testSection"]);
   }
+  
+    //データベース接続関数
+  function connectDb(){
+    $db_ini_array = parse_ini_file("db.ini", true);
+
+    $host = $db_ini_array["database"]["host"];
+    $user = $db_ini_array["database"]["user"];
+    $password = $db_ini_array["database"]["userpass"];
+    $database = $db_ini_array["database"]["database"];
+
+    return new PDO("mysql:dbname=$database;host=$host;charset=utf8",$user,$password);
+  }
+    
+  if(isset($_POST['next']))
+  {
+    try
+    {
+        $con = connectDb();
+        $sql = "SELECT * FROM user where ID = '".$_SESSION["userId"]."';";
+        $stmt = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+        if($stmt[0]['stat'] == "1")
+        {
+            //DBの受検区分を2に更新する
+            $stmt = $con->prepare("UPDATE user SET 
+              stat = 2
+              WHERE ID = :ID;");
+
+            $stmt->bindValue(":ID", $_SESSION["userId"], PDO::PARAM_STR);  
+
+            $stmt->execute();
+            
+            echo '<script type="text/javascript">';
+            echo "<!--\n";
+            echo 'location.href = "first_test_example.php"';
+            echo '// -->';
+            echo '</script>';
+        }
+    }
+    catch (PDOException $e) 
+    {
+        exit('データベース接続失敗。'.$e->getMessage());
+    } 
+  }
 ?>
 <html>
 <head>
@@ -85,8 +129,11 @@
 	<p>よろしければ、「次へ」ボタンを押してください。</p>
       </div>
       <div class="transitionButton">
-	<!--<input type='button' onclick="location.href='./confirm_info.php'" name='back' class="button" value = '戻る' >-->
-	<input type='button' onclick="location.href='./first_test_example.php'" name='next' class="button" value = '次へ' >
+        <form action="manual.php" method="post">
+        <!--<input type='button' onclick="location.href='./confirm_info.php'" name='back' class="button" value = '戻る' >-->
+        <!--<input type='button' onclick="location.href='./first_test_example.php'" name='next' class="button" value = '次へ' >-->
+            <input type='submit' name='next' class='button' value='次へ'>
+        </form>
       </div>
     </div>
   </div>

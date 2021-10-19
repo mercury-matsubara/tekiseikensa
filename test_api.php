@@ -251,28 +251,30 @@ function answerSubmitDb(){
 	
       $_SESSION["testSection"]++;
       $_SESSION["testIndex"] = 1;
-    
-    
+        
       if($_SESSION["testSection"] == 2){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "second_test_example.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "second_test_example.php"';
+        echo '// -->';
+        echo '</script>';
       }
       if($_SESSION["testSection"] == 3){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "third_test_example.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "third_test_example.php"';
+        echo '// -->';
+        echo '</script>';
       }
       if($_SESSION["testSection"] == 4){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "end_page.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "end_page.php"';
+        echo '// -->';
+        echo '</script>';
       }
     } catch (Exception $e) {
       exit('データベース接続失敗。'.$e->getMessage());
@@ -354,25 +356,28 @@ function answerSubmitDb(){
     
     
       if($_SESSION["testSection"] == 2){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "second_test_example.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "second_test_example.php"';
+        echo '// -->';
+        echo '</script>';
       }
       if($_SESSION["testSection"] == 3){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "third_test_example.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "third_test_example.php"';
+        echo '// -->';
+        echo '</script>';
       }
       if($_SESSION["testSection"] == 4){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "end_page.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "end_page.php"';
+        echo '// -->';
+        echo '</script>';
       }
     } catch (Exception $e) {
       exit('データベース接続失敗。'.$e->getMessage());
@@ -434,25 +439,28 @@ function answerSubmitDb(){
     
     
       if($_SESSION["testSection"] == 2){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "second_test_example.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "second_test_example.php"';
+        echo '// -->';
+        echo '</script>';
       }
       if($_SESSION["testSection"] == 3){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "third_test_example.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "third_test_example.php"';
+        echo '// -->';
+        echo '</script>';
       }
       if($_SESSION["testSection"] == 4){
-	echo '<script type="text/javascript">';
-	echo "<!--\n";
-	echo 'location.href = "end_page.php"';
-	echo '// -->';
-	echo '</script>';
+        statupdate();
+        echo '<script type="text/javascript">';
+        echo "<!--\n";
+        echo 'location.href = "end_page.php"';
+        echo '// -->';
+        echo '</script>';
       }
     } catch (Exception $e) {
       exit('データベース接続失敗。'.$e->getMessage());
@@ -488,7 +496,30 @@ else if($_SERVER["REQUEST_METHOD"] == "POST"){
   }
 }
 
+function statupdate()
+{
+    try{
+        $con = connectDb();    
+        $sql = "SELECT * FROM user where ID = '".$_SESSION["userId"]."';";
+        $stmt = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
+        $stat = $stmt[0]['stat'] + 1;
+
+        //DBの受検区分を更新する
+        $stmt = $con->prepare("UPDATE user SET 
+           stat = :STAT
+           WHERE ID = :ID;");
+
+        $stmt->bindValue(":ID", $_SESSION["userId"], PDO::PARAM_STR);
+        $stmt->bindValue(":STAT", $stat, PDO::PARAM_STR);
+
+        $stmt->execute();
+    }
+    catch (PDOException $e) 
+    {
+        exit('データベース接続失敗。'.$e->getMessage());
+    } 
+}
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
