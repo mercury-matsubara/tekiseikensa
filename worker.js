@@ -8,7 +8,6 @@
 var fading = false;
 var interval;
 self.addEventListener('message', function(e){
-console.log(e.data);
     switch (e.data) {
         case 'start':
             if (!fading){
@@ -20,7 +19,6 @@ console.log(e.data);
             break;
         case 'stop':
             clearInterval(interval);
-	        console.log("timestop");
             fading = false;
             break;
     };

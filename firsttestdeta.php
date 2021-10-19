@@ -138,8 +138,8 @@
                   this.showContent = false;
                 },
                 onSectionEnd: function(){
-                  //sessionStorage.removeItem("time");
-                  count_stop();
+			count_stop();
+			console.log( "エンド" + Number(sessionStorage.getItem("time")));
                 }
               }
             });

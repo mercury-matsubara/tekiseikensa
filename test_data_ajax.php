@@ -1195,9 +1195,8 @@ else if($_SESSION["testSection"] === 2){
 	      this.showContent = false;
 	    },
 	    onSectionEnd: function(){
-	      //sessionStorage.removeItem("time");
-          count_stop();
-          console.log( "countend" + Number(sessionStorage.getItem("time")));
+	    	count_stop();
+            console.log( "エンド" + Number(sessionStorage.getItem("time")));
 	    }
 	  }
 	});
@@ -1960,9 +1959,8 @@ else if($_SESSION["testSection"] === 3){
 	      this.showContent = false;
 	    },
 	    onSectionEnd: function(){
-	      //sessionStorage.removeItem("time");
-          count_stop();
-          console.log( Number(sessionStorage.getItem("time")));
+		count_stop();
+	        console.log( "エンド" + Number(sessionStorage.getItem("time")));
 	    }
 	  }
 	});
